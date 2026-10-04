@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tous les héros – Marvel-616</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="header-logo">
+            <a href="index.html" class="logo-link">
+                <img src="images/Logo Marvel.png" alt="Logo Marvel">
+            </a>
+        </div>
+        <nav class="header-nav">
+            <button class="burger-btn" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu">
+                <li class="menu-item has-submenu">
+                    <span class="menu-title">Menu</span>
+                    <ul class="submenu">
+                        <li><a href="heros.html">Super-héros</a></li>
+                        <li><a href="super-vilains.html">Super-vilains</a></li>
+                        <li><a href="equipes.html">Équipes</a></li>
+						<li><a href="entites.html">Entités</a></li>
+						<li><a href="infinity-stones.html">Les Pierres d'Infinité</a></li>
+						<li><a href="lieux.html">Lieux</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <aside class="search-box">
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Un personnage en particulier ?"
+            aria-label="Recherche sur le site"
+        >
+        <button id="search-btn">Je le recherche !</button>
+    </aside>
+
+    <h1 class="index-title">Liste complète des super-héros</h1>
+    <div class="index-separator"></div>
+
+    <div class="index-layout">
+
+        <!-- COLONNE IMAGES GAUCHE -->
+        <div class="index-images-left">
+            <div class="index-img-slot">
+                <img src="images/carrousel/hank-pym.jpg" class="active" alt="">
+            </div>
+            <div class="index-img-slot">
+                <img src="images/carrousel/black-panther.jpg" class="active" alt="">
+            </div>
+            <div class="index-img-slot">
+                <img src="images/carrousel/charles-xavier.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/cyclope.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/docteur-strange.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/ghost-rider.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/hulk.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/hawkeye.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/luke-cage.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/she-hulk.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/reed-richards.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/nova.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/faucon.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/miles-morales.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/black-widow.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/namor.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/tornade.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/wolverine.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/jessica-jones.jpg" class="active" alt="">
+            </div>
+        </div>
+
+        <!-- CONTENU CENTRAL -->
+        <div class="index-center">
+
+            <!-- A -->
+            <div class="index-letter-group">
+                <div class="index-letter">A :</div>
+                <ul class="index-list">
+                    <li><a href="heros/adam-warlock.html">Adam Warlock</a></li>
+					<li><a href="equipes/x-men/angel.html">Angel (Warren Worthington III)</a></li>
+					<li><a href="heros/hank-pym.html">Ant-Man (Hank Pym)</a></li>
+					<li><a href="heros/scott-lang.html">Ant-Man (Scott Lang)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- B -->
+            <div class="index-letter-group">
+                <div class="index-letter">B :</div>
+                <ul class="index-list">
+                    <li><a href="equipes/x-men/bishop.html">Bishop (Lucas Bishop)</a></li>
+					<li><a href="heros/black-panther.html">Black Panther (T'Challa)</a></li>
+					<li><a href="heros/black-widow.html">Black Widow (Natasha Romanoff)</a></li>
+					<li><a href="heros/blade.html">Blade (Erik Brooks)</a></li>
+					<li><a href="heros/blue-marvel.html">Blue Marvel (Adam Brashear)</a></li>
+					<li><a href="ennemis/winter-soldier.html">Bucky Barnes</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- C -->
+            <div class="index-letter-group">
+                <div class="index-letter">C :</div>
+                <ul class="index-list">
+					<li><a href="equipes/x-men/cable.html">Cable (Nathan Summers)</a></li>
+					<li><a href="heros/cloak.html">La Cape (Tyrone Johnson)</a></li>
+					<li><a href="heros/captain-america.html">Captain America (Steve Rogers)</a></li>
+					<li><a href="equipes/x-men/charles-xavier.html">Charles Xavier</a></li>
+					<li><a href="equipes/fantastic-four/ben-grimm.html">La Chose (Ben Grimm)</a></li>
+					<li><a href="equipes/x-men/colossus.html">Colossus (Piotr Rasputin)</a></li>
+					<li><a href="equipes/spiderverse/cosmic-spider-man.html">Cosmic Spider-Man (Peter Parker)</a></li>
+					<li><a href="equipes/x-men/cyclope.html">Cyclope (Scott Summers)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- D -->
+            <div class="index-letter-group">
+                <div class="index-letter">D :</div>
+                <ul class="index-list">
+                    <li><a href="heros/daredevil.html">Daredevil (Matt Murdock)</a></li>
+					<li><a href="heros/deadpool.html">Deadpool (Wade Wilson)</a></li>
+					<li><a href="equipes/x-men/diablo.html">Diablo (Kurt Wagner)</a></li>
+					<li><a href="equipes/gardiens/drax.html">Drax le Destructeur (Arthur Douglas)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- E -->
+            <div class="index-letter-group">
+                <div class="index-letter">E :</div>
+                <ul class="index-list">
+					<li><a href="equipes/x-men/emma-frost.html">Emma Frost</a></li>
+					<li><a href="heros/dagger.html">L'Épée (Tandy Bowen)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- F -->
+            <div class="index-letter-group">
+                <div class="index-letter">F :</div>
+                <ul class="index-list">
+					<li><a href="heros/falcon.html">Le Faucon (Sam Wilson)</a></li>
+					<li><a href="equipes/x-men/fauve.html">Le Fauve (Hank McCoy)</a></li>
+					<li><a href="equipes/fantastic-four/susan-storm.html">La Femme Invisible (Susan Storm)</a></li>
+					<li><a href="heros/black-bolt.html">Flèche Noire (Blackagar Boltagon)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+					
+            <!-- G -->
+            <div class="index-letter-group">
+                <div class="index-letter">G :</div>
+                <ul class="index-list">
+                    <li><a href="equipes/x-men/gambit.html">Gambit (Rémy LeBeau)</a></li>
+					<li><a href="equipes/gardiens/gamora.html">Gamora (Gamora Zen Whoberi)</a></li>
+					<li><a href="heros/ghost-rider.html">Ghost Rider (Johnny Blaze)</a></li>
+					<li><a href="heros/robbie-reyes.html">Ghost Rider (Robbie Reyes)</a></li>
+					<li><a href="equipes/gardiens/groot.html">Groot</a></li>
+					<li><a href="heros/guepe.html">La Guêpe (Janet Van Dyne)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- H -->
+            <div class="index-letter-group">
+                <div class="index-letter">H :</div>
+                <ul class="index-list">
+					<li><a href="equipes/x-men/havok.html">Havok (Alex Summers)</a></li>
+					<li><a href="heros/hawkeye.html">Hawkeye (Clint Barton)</a></li>
+					<li><a href="heros/man-thing.html">L'Homme-Chose (Theodore Sallis)</a></li>
+					<li><a href="heros/hulk.html">Hulk (Bruce Banner)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- I -->
+            <div class="index-letter-group">
+                <div class="index-letter">I :</div>
+                <ul class="index-list">
+					<li><a href="equipes/x-men/iceberg.html">Iceberg (Bobby Drake)</a></li>
+					<li><a href="heros/iron-man.html">Iron Man (Tony Stark)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- J -->
+            <div class="index-letter-group">
+                <div class="index-letter">J :</div>
+                <ul class="index-list">
+					<li><a href="equipes/x-men/jean-grey.html">Jean Grey</a></li>
+					<li><a href="heros/jessica-jones.html">Jessica Jones</a></li>
+					<li><a href="equipes/x-men/jubilee.html">Jubilee</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+					
+            <!-- K -->
+            <div class="index-letter-group">
+                <div class="index-letter">K :</div>
+                <ul class="index-list">
+                    <li><a href="equipes/x-men/kitty-pryde.html">Kitty Pryde</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+					
+            <!-- L -->
+            <div class="index-letter-group">
+                <div class="index-letter">L :</div>
+                <ul class="index-list">
+                    <li><a href="heros/luke-cage.html">Luke Cage</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+					
+            <!-- M -->
+            <div class="index-letter-group">
+                <div class="index-letter">M :</div>
+                <ul class="index-list">
+                    <li><a href="equipes/x-men/magik.html">Magik (Illyana Rasputin)</a></li>
+					<li><a href="equipes/x-men/malicia.html">Malicia (Anna Marie)</a></li>
+					<li><a href="equipes/gardiens/mantis.html">Mantis</a></li>
+					<li><a href="heros/captain-marvel.html">Miss Marvel (Carol Danvers)</a></li>
+					<li><a href="heros/she-hulk.html">Miss-Hulk (Jennifer Walters)</a></li>
+					<li><a href="equipes/fantastic-four/reed-richards.html">Mr. Fantastique (Reed Richards)</a></li>
+					<li><a href="heros/moon-knight.html">Moon Knight (Marc Spector)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- N -->
+            <div class="index-letter-group">
+                <div class="index-letter">N :</div>
+                <ul class="index-list">
+					<li><a href="heros/namor.html">Namor</a></li>
+					<li><a href="heros/nova.html">Nova (Richard Rider)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- O -->
+            <div class="index-letter-group">
+                <div class="index-letter">O :</div>
+                <ul class="index-list">
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- P -->
+            <div class="index-letter-group">
+                <div class="index-letter">P :</div>
+                <ul class="index-list">
+					<li><a href="equipes/x-men/psylocke.html">Psylocke (Betsy Braddock)</a></li>
+					<li><a href="heros/punisher.html">Le Punisher (Frank Castle)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- Q -->
+            <div class="index-letter-group">
+                <div class="index-letter">Q :</div>
+                <ul class="index-list">
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+					
+            <!-- R -->
+            <div class="index-letter-group">
+                <div class="index-letter">R :</div>
+                <ul class="index-list">
+					<li><a href="equipes/gardiens/rocket-raccoon.html">Rocket Raccoon</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+					
+            <!-- S -->
+            <div class="index-letter-group">
+                <div class="index-letter">S :</div>
+                <ul class="index-list">
+                    <li><a href="equipes/spiderverse/ben-reilly.html">Scarlet-Spider (Ben Reilly)</a></li>
+					<li><a href="equipes/spiderverse/kaine-parker.html">Scarlet-Spider (Kaine Parker)</a></li>
+					<li><a href="heros/sentry.html">Sentry (Robert Reynolds)</a></li>
+					<li><a href="equipes/spiderverse/silk.html">Silk (Cindy Moon)</a></li>
+					<li><a href="heros/scarlet-witch.html">La Sorcière Rouge (Wanda Maximoff)</a></li>
+					<li><a href="equipes/spiderverse/spdr.html">SP//dr (Peni Parker)</a></li>
+					<li><a href="heros/spider-man.html">Spider-Man (Peter Parker)</a></li>
+					<li><a href="heros/miles-morales.html">Spider-Man (Miles Morales)</a></li>
+					<li><a href="equipes/spiderverse/spider-bitch.html">Spider-Bitch (Ashley Barton)</a></li>
+					<li><a href="equipes/spiderverse/spider-girl.html">Spider-Girl (Mayday Parker)</a></li>
+					<li><a href="equipes/spiderverse/spider-gwen.html">Spider-Gwen (Gwen Stacy)</a></li>
+					<li><a href="equipes/spiderverse/spider-ham.html">Spider-Ham (Peter Porker)</a></li>
+					<li><a href="equipes/spiderverse/spider-india.html">Spider-India (Pavitr Prabhakar)</a></li>
+					<li><a href="equipes/spiderverse/spider-maam.html">Spider-Ma'am (Maybelle Parker)</a></li>
+					<li><a href="equipes/spiderverse/spider-man-1602.html">Spider-Man 1602 (Peter Parker)</a></li>
+					<li><a href="equipes/spiderverse/spider-man-2099.html">Spider-Man 2099 (Miguel O'Hara)</a></li>
+					<li><a href="equipes/spiderverse/spider-man-last-stand.html">Spider-Man : Last Stand (Peter Parker)</a></li>
+					<li><a href="equipes/spiderverse/spider-man-mangaverse.html">Spider-Man Mangaverse (Peter Parker)</a></li>
+					<li><a href="equipes/spiderverse/spider-man-noir.html">Spider-Man Noir (Peter B. Parker)</a></li>
+					<li><a href="equipes/spiderverse/spider-punk.html">Spider-Punk (Hobby Brown)</a></li>
+					<li><a href="equipes/spiderverse/spider-uk.html">Spider-UK (William Braddock)</a></li>
+					<li><a href="equipes/spiderverse/jessica-drew.html">Spider-Woman (Jessica Drew)</a></li>
+					<li><a href="equipes/spiderverse/julia-carpenter.html">Spider-Woman (Julia Carpenter)</a></li>
+					<li><a href="equipes/gardiens/star-lord.html">Star-Lord (Peter Quill)</a></li>
+					<li><a href="heros/docteur-strange.html">Le Docteur Strange (Stephen Strange)</a></li>
+					<li><a href="heros/silver-surfer.html">Le Surfer d'Argent (Norrin Radd)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+					
+            <!-- T -->
+            <div class="index-letter-group">
+                <div class="index-letter">T :</div>
+                <ul class="index-list">
+                    <li><a href="heros/thor.html">Thor</a></li>
+					<li><a href="equipes/fantastic-four/johnny-storm.html">La Torche Humaine (Johnny Storm)</a></li>
+					<li><a href="equipes/x-men/tornade.html">Tornade (Ororo Munroe)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+					
+            <!-- U -->
+            <div class="index-letter-group">
+                <div class="index-letter">U :</div>
+                <ul class="index-list">
+					<li><a href="heros/us-agent.html">U.S. Agent (John Walker)</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+					
+            <!-- V -->
+            <div class="index-letter-group">
+                <div class="index-letter">V :</div>
+                <ul class="index-list">
+                    <li><a href="heros/quicksilver.html">Vif-Argent (Pietro Maximoff)</a></li>
+					<li><a href="heros/vision.html">La Vision</a></li>
+                </ul>
+            </div>
+            <div class="index-group-separator"></div>
+
+            <!-- W -->
+            <div class="index-letter-group">
+                <div class="index-letter">W :</div>
+                <ul class="index-list">
+					<li><a href="heros/wolverine.html">Wolverine (James Howlett)</a></li>
+                </ul>
+            </div>
+			<div class="index-group-separator"></div>
+
+            <!-- X -->
+            <div class="index-letter-group">
+                <div class="index-letter">X :</div>
+                <ul class="index-list">
+                </ul>
+            </div>
+			<div class="index-group-separator"></div>
+
+            <!-- Y -->
+            <div class="index-letter-group">
+                <div class="index-letter">Y :</div>
+                <ul class="index-list">
+                </ul>
+            </div>
+			<div class="index-group-separator"></div>
+
+            <!-- Z -->
+            <div class="index-letter-group">
+                <div class="index-letter">Z :</div>
+                <ul class="index-list">
+                </ul>
+            </div>
+        </div>
+
+        <!-- COLONNE IMAGES DROITE -->
+        <div class="index-images-right">
+            <div class="index-img-slot">
+                <img src="images/carrousel/scott-lang.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/blade.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/captain-america.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/daredevil.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/fauve.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/guepe.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/iron-man.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/wanda.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/carol-danvers.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/moon-knight.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/punisher.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/deadpool.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/spider-man.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/star-lord.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/silver-surfer.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/thor.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/sentry.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/quicksilver.jpg" class="active" alt="">
+            </div>
+			<div class="index-img-slot">
+                <img src="images/carrousel/susan-storm.jpg" class="active" alt="">
+            </div>
+        </div>
+
+    </div><!-- fin .index-layout -->
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 – Marvel-616</p>
+    <p>
+        Site de fans non officiel — non affilié à Marvel Entertainment ou Disney.
+        Tous droits réservés à leurs ayants droit respectifs.
+    </p>
+    <p>
+        <a href="contact.html">Contact</a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+<button id="backToTop" aria-label="Revenir en haut" title="Retour en haut">↑</button>
+
+</body>
+</html>

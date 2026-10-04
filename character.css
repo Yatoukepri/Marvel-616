@@ -1,0 +1,2184 @@
+/* =========================
+     STRUCTURE GÉNÉRALE
+========================= */
+
+.site-footer {
+    position: static;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.page-content {
+    display: block;
+}
+
+/* =========================
+     TYPOGRAPHIE GÉNÉRALE
+========================= */
+
+/* Titre principal */
+.site-title {
+    margin: 0 0 2rem 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1f2a44;
+}
+
+/* Hiérarchie des titres */
+h2 {
+    margin-bottom: 1rem;
+    color: #1f2a44;
+}
+
+.character-page h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid rgba(0,0,0,0.08);
+}
+
+.character-page h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+    color: #2a3a5a;
+}
+
+/* Paragraphes */
+.character-page main p {
+    max-width: none;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.character-personality p,
+.character-origins p {
+    font-size: 0.95rem;
+}
+
+/* ===============================
+     ÉLÉMENTS COMMUNS AUX PAGES
+================================ */
+
+/* Séparateurs */
+.separator {
+    width: 100%;
+    height: 2px;
+    margin: 4rem 0;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.45), transparent);
+}
+
+/* Espacements des sections */
+.character-intro,
+.character-origins,
+.character-personality,
+.character-powers,
+.character-costume,
+.character-gallery,
+.character-enemies,
+.character-teams,
+.character-heralds {
+    margin-top: 3rem;
+}
+
+/* Listes */
+.character-infos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.character-infos li{
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid #2f65b0;
+}
+
+.character-powers ul {
+    margin: 1rem 0 2rem;
+    padding-left: 1.2rem;
+}
+
+/* =========================
+      IMAGE D'EN-TÊTE
+========================= */
+
+.page-hero-image {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.page-hero-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.page-hero-image:hover img {
+    transform: scale(1.08);
+}
+
+/* =========================
+      SECTION INTRO
+========================= */
+
+.character-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.character-versions img,
+.character-infos img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===========================
+   ACCORDÉON INFOS GÉNÉRALES
+============================ */
+
+/* Conteneur */
+.character-versions {
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.version-item:not(:last-child) {
+    border-bottom: 1px solid #e4e6eb;
+}
+
+/* Bouton toggle */
+.version-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #e4e6eb;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+}
+
+.version-toggle .title {
+    flex: 1;
+}
+
+/* Icône toggle - Fermé (flèche vers le bas) */
+.toggle-icon {
+    width: 16px;
+    height: 16px;
+    background: #000;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.toggle-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translate(-50%, -40%) rotate(45deg);
+}
+
+.toggle-icon::after {
+    content: "";
+    position: absolute;
+    bottom: 45%;
+    left: 50%;
+    width: 2px;
+    height: 6px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* Icône toggle - Ouvert (minus) */
+.version-item.is-open .toggle-icon {
+    border-radius: 3px;
+}
+
+.version-item.is-open .toggle-icon::before,
+.version-item.is-open .toggle-icon::after {
+    content: "";
+    width: 8px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Contenu animé */
+.version-content {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.7s ease;
+}
+
+.version-content img {
+    width: 100%;
+    display: block;
+}
+
+/* =========================
+      SECTION ORIGINES
+========================= */
+
+.character-origins {
+    margin-top: 3rem;
+}
+
+.origins-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.origins-text p {
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.origins-images {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.origins-images img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    cursor: zoom-in;
+}
+
+/* Images mobiles uniquement */
+.origins-images img.origin-mobile-only {
+    display: none;
+}
+
+/* =========================
+     SECTION PERSONNALITÉ
+========================= */
+
+.character-personality p {
+    margin-bottom: 1rem;
+}
+
+/* =========================
+      SECTION CAPACITÉS
+========================= */
+
+.powers-chart img {
+    width: 100%;
+    display: block;
+}
+
+.powers-chart .skills-image {
+    margin-top: 2.5rem;
+}
+
+/* =========================
+      SECTION COSTUME
+========================= */
+
+.costume-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+}
+
+.costume-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Accordéon costumes (variante) */
+.costume-accordion {
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.costume-accordion .version-content {
+    padding: 0;
+}
+
+.version-item.is-open .version-content {
+    padding: 1.5rem;
+}
+
+.costume-accordion .costume-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.costume-accordion .costume-image img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+.costume-accordion .costume-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Accordéon avec flèche à gauche */
+.left-icon-accordion .version-toggle {
+    justify-content: flex-start;
+    gap: 0.75rem;
+}
+
+.left-icon-accordion .toggle-icon {
+    order: 0;
+}
+
+.left-icon-accordion .title {
+    order: 1;
+}
+
+/* =========================
+      CARROUSEL (GALERIE)
+========================= */
+
+.carousel-test {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-page {
+    flex: 0 0 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-test .track img {
+    width: calc((100% - 40px) / 3);
+    height: 260px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Boutons flèches */
+.carousel-arrow {
+    width: 30px;
+    height: 30px;
+    background-color: #BD1717;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    font-size: 0;
+    appearance: none;
+    cursor: pointer;
+    align-self: center;
+    flex: 0 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.carousel-arrow.left {
+    left: -27px;
+}
+
+.carousel-arrow.right {
+    right: -27px;
+}
+
+.carousel-arrow::before {
+    content: "";
+    width: 0;
+    height: 0;
+}
+
+.carousel-arrow.left::before {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 11px solid #fff;
+    transform: translateX(-1px);
+}
+
+.carousel-arrow.right::before {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 11px solid #fff;
+    transform: translateX(1px);
+}
+
+.carousel-arrow:hover {
+    background-color: #a51414;
+}
+
+/* =========================
+      SECTION ENNEMIS
+========================= */
+
+.character-enemies > h2 {
+    text-align: center;
+}
+
+.enemies-grid {
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: start;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Colonnes dynamiques (pilotées par JS) */
+.enemies-grid.cols-5 { grid-template-columns: repeat(5, 1fr); }
+.enemies-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.enemies-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.enemies-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+.enemy-card img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+.enemy-card figcaption {
+    margin-top: 0.6rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* =========================
+      SECTION ÉQUIPES
+========================= */
+
+.character-teams {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-teams > h2 {
+    text-align: center;
+}
+
+.teams-grid {
+    display: grid;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+/* Classes pilotées par JS */
+.teams-grid.teams-1 { grid-template-columns: repeat(1, 1fr); }
+.teams-grid.teams-2 { grid-template-columns: repeat(2, 1fr); }
+.teams-grid.teams-3 { grid-template-columns: repeat(3, 1fr); }
+.teams-grid.teams-4 { grid-template-columns: repeat(4, 1fr); }
+.teams-grid.teams-5 { grid-template-columns: repeat(5, 1fr); }
+
+/* Limitation taille pour 1-2 images (pages personnages uniquement) */
+.character-page .character-teams .teams-grid.teams-1 {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.character-page .character-teams .teams-grid.teams-2 {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.character-page .character-teams .teams-grid.teams-2 .team-card {
+    max-width: 240px;
+}
+
+/* Cartes équipes */
+.team-card {
+    width: 100%;
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.team-card figcaption {
+    margin-top: 0.6rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #777;
+    line-height: 1.4;
+}
+
+.team-card p {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+}
+
+/* Image centrée (variante) */
+.team-centered-image {
+    display: block;
+}
+
+.team-centered-image p {
+    text-align: left;
+}
+
+.team-centered-image .team-figure {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.team-centered-image .team-figure img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.team-centered-image .team-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* Desktop + Tablette : 3 colonnes (page liste équipes) */
+.heroes-list.teams-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* ==============================
+    SECTION HÉRAUTS (GALACTUS)
+============================== */
+
+.character-heralds {
+    margin-top: 3rem;
+}
+
+.heralds-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #2a3a5a;
+}
+
+.heralds-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.herald-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.herald-card figcaption {
+    margin-top: 0.6rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+	  PAGE SENTINELLES (STRUCTURES SPÉCIALES)
+========================= */
+
+.sentinels-fulltext {
+    margin-top: 3rem;
+}
+
+.sentinels-split,
+.sentinels-centered {
+    margin-top: 4rem;
+}
+
+.sentinels-grid.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.sentinels-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.sentinels-text.center {
+    text-align: center;
+}
+
+.sentinels-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sentinels-images img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.sentinels-around,
+.sentinels-mixed {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sentinels-split.reverse .sentinels-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Nimrod - Image plus petite */
+.sentinels-split h2 + .sentinels-grid .sentinels-images.one {
+    max-width: 280px;
+}
+
+.sentinels-split h2 + .sentinels-grid .sentinels-images.one img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+}
+
+/* Nimrod - Ajustement texte */
+.sentinels-split.reverse .sentinels-text {
+    max-width: 420px;
+    margin-left: 0;
+    margin-right: auto;
+    align-self: center;
+}
+
+.sentinels-split.reverse .sentinels-text p {
+    text-align: left;
+}
+
+.sentinels-split.reverse .sentinels-grid.two-cols {
+    grid-template-columns: 0.7fr 1.3fr;
+}
+
+.sentinel-figure {
+    margin: 0;
+}
+
+.sentinel-figure figcaption {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+        LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.lightbox.active .lightbox-image {
+    transform: scale(1);
+}
+
+.lightbox-image.zoomed {
+    cursor: grab;
+    transform: scale(1.5);
+}
+
+.lightbox-image.dragging {
+    cursor: grabbing;
+}
+
+.lightbox-trigger {
+    cursor: zoom-in;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+.lightbox-toolbar {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+	z-index: 10001;
+}
+
+.lightbox-btn {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.lightbox-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+      Z-INDEX & STACKING
+========================= */
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+}
+
+.site-header .submenu {
+    position: absolute;
+    z-index: 1100;
+}
+
+/* =========================
+      LAYOUT DESKTOP
+========================= */
+
+.layout-desktop {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* =========================
+       ANIMATIONS
+========================= */
+
+@keyframes characterSearchEnter {
+    from {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+      LÉGENDES COMMUNES
+========================= */
+
+.feature-image figcaption {
+    margin-top: 0.6rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #8a8a8a;
+}
+
+/* =========================
+    RESPONSIVE - TABLETTE (max-width: 1024px)
+========================= */
+
+@media (max-width: 1024px) {
+    /* Équipes */
+    .teams-grid.teams-5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .teams-grid.teams-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .character-page .character-teams .teams-grid.teams-1 {
+        max-width: 280px;
+    }
+    
+    .character-page .character-teams .teams-grid.teams-2 {
+        max-width: 480px;
+    }
+    
+    .character-page .character-teams .teams-grid.teams-2 .team-card {
+        max-width: 220px;
+    }
+}
+
+/* =========================
+    RESPONSIVE - INTERMÉDIAIRE (max-width: 900px)
+========================= */
+
+@media (max-width: 900px) {
+    .enemies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .teams-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .heralds-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =========================
+    RESPONSIVE - MOBILE (max-width: 768px)
+========================= */
+
+@media (max-width: 768px) {
+    /* Intro et Costume → 1 colonne (PAS Origines) */
+    .character-intro,
+    .costume-content {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ordre intro (infos avant accordéon) */
+    .character-intro {
+        display: grid;
+    }
+    
+    .character-infos {
+        order: -1;
+    }
+    
+    .character-versions {
+        order: 1;
+    }
+	
+/* =========================================================
+   IMAGES DE L'INTRO — RÉDUCTION MOBILE
+========================================================= */
+
+/* Image unique de l'Intro */
+.character-feature .feature-image {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Images de l'Intro avec accordéon */
+.character-versions .version-content img {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+	
+	/* COSTUME - Texte au-dessus, image réduite en dessous */
+.costume-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.costume-text {
+    order: 1;
+}
+
+.costume-image {
+    order: 2;
+    max-width: 280px;
+    margin: 1.5rem auto 0;
+}
+
+.costume-image img {
+    width: 100%;
+    height: auto;
+}
+    
+    /* Carrousel */
+    .carousel-track img {
+        width: 150px;
+    }
+    
+    /* Costumes accordéon */
+    .costume-accordion .costume-content {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Sentinelles */
+    .sentinels-grid.two-cols,
+    .sentinels-around,
+    .sentinels-mixed {
+        grid-template-columns: 1fr;
+    }
+    
+    .sentinels-text.center {
+        text-align: left;
+    }
+    
+    /* Images mobiles uniquement */
+    .origins-images img.origin-mobile-only {
+        display: block;
+    }
+}
+
+/* =========================
+    RESPONSIVE - PETIT MOBILE (max-width: 600px)
+========================= */
+
+@media (max-width: 600px) {
+    /* Grilles 2 colonnes */
+    .enemies-grid,
+    .teams-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .teams-grid.teams-3,
+    .teams-grid.teams-4,
+    .teams-grid.teams-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .character-page .character-teams .teams-grid.teams-1 {
+        max-width: 240px;
+    }
+    
+    .character-page .character-teams .teams-grid.teams-2 {
+        max-width: 440px;
+    }
+    
+    .character-page .character-teams .teams-grid.teams-2 .team-card {
+        max-width: 200px;
+    }
+    
+    .heralds-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   ILLUMINATI – GRILLE 7
+========================= */
+
+.illuminati-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+}
+
+/* 4e image prend toute la ligne */
+.illuminati-grid .enemy-card:nth-child(4) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 1.8rem * 2) / 3);
+}
+
+/* Images */
+.illuminati-grid .enemy-card img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+/* =========================
+   FANTASTIC FOUR – MEMBRES
+========================= */
+
+.ff-members {
+    margin-top: 2rem;
+}
+
+.ff-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.ff-row.reverse {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.ff-image img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+.ff-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+    .ff-row,
+    .ff-row.reverse {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Chaque paire image+texte forme un bloc vertical */
+    .ff-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ff-text {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .ff-text p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    /*
+     * Ligne 1 (Reed / Sue) : Reed = image gauche + texte droite | Sue = texte gauche + image droite
+     * HTML : ff-image(Reed), ff-text(Reed), ff-image(Sue), ff-text(Sue)
+     * Résultat voulu en grille 2 cols :
+     *   col1 row1 = image Reed  | col2 row1 = texte Reed
+     *   col1 row2 = texte Sue   | col2 row2 = image Sue
+     */
+    .ff-row .ff-image:nth-child(1) { order: 1; }  /* image Reed  → col1 row1 */
+    .ff-row .ff-text:nth-child(2)  { order: 2; }  /* texte Reed  → col2 row1 */
+    .ff-row .ff-text:nth-child(4)  { order: 3; }  /* texte Sue   → col1 row2 */
+    .ff-row .ff-image:nth-child(3) { order: 4; }  /* image Sue   → col2 row2 */
+
+    /*
+     * Ligne 2 (Johnny / Ben) : Johnny = image gauche + texte droite | Ben = texte gauche + image droite
+     * HTML : ff-text(Johnny), ff-image(Johnny), ff-text(Ben), ff-image(Ben)
+     */
+    .ff-row.reverse .ff-image:nth-child(2) { order: 1; }  /* image Johnny → col1 row1 */
+    .ff-row.reverse .ff-text:nth-child(1)  { order: 2; }  /* texte Johnny → col2 row1 */
+    .ff-row.reverse .ff-text:nth-child(3)  { order: 3; }  /* texte Ben    → col1 row2 */
+    .ff-row.reverse .ff-image:nth-child(4) { order: 4; }  /* image Ben    → col2 row2 */
+
+}
+
+/* Variante accordéon costumes */
+
+.costume-variant {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.costume-variant .version-content {
+    padding: 0;
+}
+
+.costume-variant img {
+    width: 100%;
+    display: block;
+}
+
+.costume-description p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   TEAM PAGE – GRILLE 3x3
+========================= */
+
+.team-section {
+    margin-top: 4rem;
+}
+
+/* Texte centré */
+.team-section-text {
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+}
+
+.team-section-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Grille 3x3 */
+.team-grid-3x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.team-grid-3x3 img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+/* Titre centré */
+.team-section h2 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* =========================
+   TEAM PAGE – TEXTE CENTRÉ
+========================= */
+
+.team-text-section {
+    margin-top: 4rem;
+}
+
+.team-text-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.team-text-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-text-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+/* =========================
+   GRILLE 4x2 — LIGHTBOX (8 images)
+========================= */
+
+.story-grid-4x2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.story-grid-4x2 figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-grid-4x2 figure img {
+    width: 100%;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-grid-4x2 figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+   GRILLE 3x2 — LIGHTBOX (6 images)
+========================= */
+
+.story-grid-3x2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.story-grid-3x2 figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-grid-3x2 figure img {
+    width: 100%;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-grid-3x2 figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+   IMAGE CENTRALE (pas pleine largeur)
+========================= */
+
+.story-centered-image {
+    margin: 2rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-centered-image img {
+    max-width: 55%;
+    height: auto;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: zoom-in;
+}
+
+.story-centered-image figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #777;
+    text-align: center;
+}
+
+/* =========================
+   BLOC TEXTE 75% + IMAGE 25%
+========================= */
+
+.story-text-with-image {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.story-text-with-image .story-side-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-text-with-image .story-side-image figure {
+    margin: 0;
+    width: 100%;
+}
+
+.story-text-with-image .story-side-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-text-with-image .story-side-image figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+   RESPONSIVE — STORY GRIDS
+========================= */
+
+@media (max-width: 900px) {
+    .story-grid-4x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .story-grid-4x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-grid-3x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-centered-image img {
+        max-width: 85%;
+    }
+
+    .story-text-with-image {
+        grid-template-columns: 1fr;
+    }
+
+    .story-text-with-image .story-side-image {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-grid-4x2,
+    .story-grid-3x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   INTRO ACCORDÉON (image gauche + accordéon droite)
+========================= */
+
+.intro-with-accordion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: start;
+}
+
+.intro-with-accordion .character-feature {
+    margin: 0;
+}
+
+.intro-with-accordion .character-versions {
+    margin: 0;
+}
+
+/* =========================
+   GRILLE 1x4 (une ligne de 4 images)
+========================= */
+
+.story-grid-1x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.story-grid-1x4 figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-grid-1x4 figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-grid-1x4 figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+   GRILLE 4+4+3 (deux lignes de 4, une ligne de 3 alignée à gauche)
+========================= */
+
+.story-grid-4x3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.story-grid-4x3 figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-grid-4x3 figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-grid-4x3 figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* Place vide dans la grille 4+4+3 */
+.story-grid-4x3 .grid-empty {
+    visibility: hidden;
+}
+
+/* =========================
+   DOUBLE SECTION CÔTE À CÔTE (gauche / droite)
+========================= */
+
+.story-double-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
+    align-items: start;
+}
+
+.story-double-section .double-col-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2a44;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    text-decoration: underline;
+}
+
+/* Grille 4+3 gauche (3 images alignées à gauche) */
+.story-double-section .col-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+.story-double-section .col-grid figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-double-section .col-grid figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-double-section .col-grid figcaption {
+    margin-top: 0.4rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* Espace vide gauche : 4e cellule invisible */
+.story-double-section .col-left .grid-empty {
+    visibility: hidden;
+}
+
+/* Espace vide droite : 1re cellule invisible (images alignées à droite) */
+.story-double-section .col-right .grid-empty {
+    visibility: hidden;
+}
+
+/* =========================
+   BLOC TEXTE + IMAGE CÔTE À CÔTE (texte gauche, image droite)
+========================= */
+
+.story-text-image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.story-text-image-row .row-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.story-text-image-row .row-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-text-image-row .row-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-text-image-row .row-image figcaption {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* Espaceur entre deux blocs texte+image */
+.story-row-spacer {
+    height: 3rem;
+}
+
+/* =========================
+   TITRE DE SECTION ALIGNÉ À GAUCHE
+========================= */
+
+.section-title-left {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1f2a44;
+    margin-bottom: 1.2rem;
+    margin-top: 0;
+}
+
+/* =========================
+   RESPONSIVE — NOUVELLES STRUCTURES
+========================= */
+
+@media (max-width: 900px) {
+    .story-double-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-with-accordion {
+        grid-template-columns: 1fr;
+    }
+
+    .story-grid-1x4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-grid-4x3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-double-section .col-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-text-image-row {
+        grid-template-columns: 1fr;
+    }
+
+    .story-text-image-row .row-image {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-grid-1x4,
+    .story-grid-4x3,
+    .story-double-section .col-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   ACCORDÉON INTRO — CONTENU INTERNE
+========================= */
+
+.accordion-inner {
+    padding: 1rem;
+}
+
+.accordion-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================
+   SÉPARATEUR COURT (60%, centré)
+========================= */
+
+.separator-short {
+    width: 60%;
+    height: 2px;
+    margin: 3rem auto;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.45), transparent);
+}
+
+/* =========================
+   IMAGE CENTRALE LARGE (80% de largeur)
+========================= */
+
+.story-centered-image-large img {
+    max-width: 80%;
+}
+
+/* =========================
+   GRILLE 1x3 — LIGHTBOX (3 images sur une ligne)
+========================= */
+
+.story-grid-1x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.story-grid-1x3 figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-grid-1x3 figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-grid-1x3 figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+   GRILLE 3x6 avec trou central dernière ligne
+========================= */
+
+.story-grid-3x6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.story-grid-3x6 figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-grid-3x6 figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-grid-3x6 figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+.story-grid-3x6 .grid-empty {
+    visibility: hidden;
+}
+
+/* =========================
+   RESPONSIVE — NOUVELLES CLASSES
+========================= */
+
+@media (max-width: 768px) {
+    .story-grid-1x3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-grid-3x6 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-centered-image-large img {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-grid-1x3,
+    .story-grid-3x6 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   BLOC TEXTE + IMAGE DROITE (image ~20-25%)
+   Titre en haut à gauche du texte
+========================= */
+
+.story-block-image-right {
+    display: grid;
+    grid-template-columns: 1fr 22%;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.story-block-image-right .block-text h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.story-block-image-right .block-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.story-block-image-right .block-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-block-image-right .block-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-block-image-right .block-image figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+   BLOC TEXTE + IMAGE GAUCHE (image ~30%)
+   Titre en haut à gauche du texte
+========================= */
+
+.story-block-image-left {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.story-block-image-left .block-text h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.story-block-image-left .block-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.story-block-image-left .block-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-block-image-left .block-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-block-image-left .block-image figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+   TITRE CENTRÉ DE SECTION
+========================= */
+
+.section-title-center {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1f2a44;
+    margin: 2rem 0 1.5rem 0;
+}
+
+/* =========================
+   GRILLE 6x3 — LIGHTBOX (18 images, 3 lignes de 6)
+========================= */
+
+.story-grid-6x3 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.story-grid-6x3 figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-grid-6x3 figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-grid-6x3 figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+   RESPONSIVE — BLOCS TEXTE+IMAGE ET GRILLE 6x3
+========================= */
+
+@media (max-width: 900px) {
+    .story-grid-6x3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .story-block-image-right,
+    .story-block-image-left {
+        grid-template-columns: 1fr;
+    }
+
+    .story-block-image-left .block-image {
+        order: -1;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .story-block-image-right .block-image {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .story-grid-6x3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .story-grid-6x3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   BLOC TEXTE GAUCHE + IMAGE DROITE (~30%)
+========================= */
+
+.story-block-image-right-lg {
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.story-block-image-right-lg .block-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.story-block-image-right-lg .block-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-block-image-right-lg .block-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+    display: block;
+}
+
+.story-block-image-right-lg .block-image figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .story-block-image-right-lg {
+        grid-template-columns: 1fr;
+    }
+
+    .story-block-image-right-lg .block-image {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+}
+
+/* =========================
+   TITRE DE SECTION ALIGNÉ À GAUCHE (override team-section h2)
+========================= */
+
+.team-section h2.title-left {
+    text-align: left;
+    margin-top: 0;
+}
+
+/* Cache uniquement les <br> placés juste après une image mobile */
+.origins-images img.origin-mobile-only + br {
+    display: none;
+}
+
+/* Sur mobile, on réaffiche ces <br> */
+@media (max-width: 768px) {
+    .origins-images img.origin-mobile-only + br {
+        display: block;
+    }
+}
+
+/* =========================================================
+   PAGE SENTINELLES — CHANGEMENT RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* -----------------------------------------
+       PREMIÈRES SENTINELLES
+       2 images côte à côte sous le texte
+    ----------------------------------------- */
+
+    .sentinels-split:has(.sentinels-images.three) .sentinels-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        align-items: start;
+    }
+
+    .sentinels-split:has(.sentinels-images.three) .sentinels-images br {
+        display: none;
+    }
+
+    .sentinels-split:has(.sentinels-images.three) .sentinel-figure {
+        margin: 0;
+    }
+
+
+    /* -----------------------------------------
+       SENTINELLES MK II
+       Texte puis 2 images côte à côte
+    ----------------------------------------- */
+
+    .sentinels-centered .sentinels-around {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        align-items: start;
+    }
+
+    .sentinels-centered .sentinels-around .sentinels-text {
+        grid-column: 1 / -1;
+        order: -1;
+    }
+
+    .sentinels-centered .sentinels-around img {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------
+       SENTINELLES MK III
+       Texte puis 2 images côte à côte
+    ----------------------------------------- */
+
+    .sentinels-split:has(.sentinels-images.two) .sentinels-grid.two-cols {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        align-items: start;
+    }
+
+    .sentinels-split:has(.sentinels-images.two) .sentinels-text {
+        grid-column: 1 / -1;
+        order: -1;
+    }
+
+    .sentinels-split:has(.sentinels-images.two) .sentinels-images.two {
+        display: contents;
+    }
+
+
+    /* -----------------------------------------
+       SENTINELLES MK IV / V / VI
+       Texte puis 3 images côte à côte
+    ----------------------------------------- */
+
+    .sentinels-mixed {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        align-items: start;
+    }
+
+    .sentinels-mixed .sentinels-text {
+        grid-column: 1 / -1;
+        order: -1;
+    }
+
+    .sentinels-mixed .sentinels-images.two,
+    .sentinels-mixed .sentinels-images.one {
+        display: contents;
+    }
+
+    .sentinels-mixed .sentinels-images br {
+        display: none;
+    }
+
+
+    /* -----------------------------------------
+       AUTRES MODÈLES
+       Image centrée
+    ----------------------------------------- */
+
+    .sentinels-split:not(.reverse):has(.sentinels-images.one) .sentinels-images.one {
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* =========================================================
+   INFINITY STONES — INTRODUCTION MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .infinity-intro-blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 0.75rem;
+        align-items: center;
+    }
+
+    /* On fusionne les deux blocs dans la même grille */
+    .infinity-intro-blocks .story-block-image-right,
+    .infinity-intro-blocks .story-block-image-left {
+        display: contents;
+    }
+
+    /* Premier texte */
+    .infinity-intro-blocks .story-block-image-right .block-text {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        order: 0;
+    }
+
+    /* Première image */
+    .infinity-intro-blocks .story-block-image-right .block-image {
+        grid-column: 1;
+        grid-row: 2;
+        max-width: none;
+        margin: 0;
+        order: 0;
+    }
+
+    /* Deuxième image */
+    .infinity-intro-blocks .story-block-image-left .block-image {
+        grid-column: 2;
+        grid-row: 2;
+        max-width: none;
+        margin: 0;
+        order: 0;
+    }
+
+    /* Deuxième texte */
+    .infinity-intro-blocks .story-block-image-left .block-text {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        order: 0;
+    }
+
+    /* Les deux images occupent leur moitié de la largeur */
+    .infinity-intro-blocks .block-image img {
+        width: 100%;
+    }
+}

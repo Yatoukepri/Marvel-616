@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Héros – Marvel-616</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon-32x32.png" type="image/png">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="manifest" href="site.webmanifest">
+    <style>
+        .index-btn-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 2.5rem 0 0.5rem 0;
+        }
+        .index-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.85rem 1.8rem;
+            background-color: #1f5097;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            border: 2px solid #1f5097;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+        .index-btn:hover {
+            background-color: #193f7a;
+            border-color: #193f7a;
+            transform: translateY(-2px);
+        }
+        .index-btn-icon {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <div class="header-logo">
+            <a href="index.html" class="logo-link">
+                <img src="images/Logo Marvel.png" alt="Logo Marvel">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+            <button class="burger-btn" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="menu">
+                <li class="menu-item has-submenu">
+                    <span class="menu-title">Menu</span>
+                    <ul class="submenu">
+                        <li><a href="heros.html">Super-héros</a></li>
+                        <li><a href="super-vilains.html">Super-vilains</a></li>
+                        <li><a href="equipes.html">Équipes</a></li>
+						<li><a href="entites.html">Entités</a></li>
+						<li><a href="infinity-stones.html">Les Pierres d'Infinité</a></li>
+						<li><a href="lieux.html">Lieux</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main class="container">
+
+<div class="page-layout">
+
+	<!-- CONTENU PRINCIPAL -->
+	<section class="page-content">
+	
+    <div class="page-hero-image">
+		<img src="images/header/Header Héros.jpg" alt="Héros Marvel">
+	</div>
+	
+	<!-- Search-box fiche personnage -->
+	
+<aside class="search-box">
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Un personnage en particulier ?"
+        aria-label="Recherche sur le site"
+    >
+    <button id="search-btn">Je le recherche !</button>
+</aside>
+
+	<h1 class="site-title">Héros</h1>
+
+<!-- Liste Héros -->
+
+<section class="heroes-list">
+
+    <article class="hero-item from-left">
+		<a href="heros/spider-man.html">
+			<img src="images/logos héros/Spider-Man (Peter).jpg" alt="Spider-Man">
+		</a>
+		<h2 class="hero-name">Spider-Man (Peter Parker)</h2>
+	</article>
+
+    <article class="hero-item from-top">
+		<a href="heros/miles-morales.html">
+			<img src="images/logos héros/Spider-Man (Miles).jpg" alt="Spider-Man (Miles)">
+		</a>
+		<h2 class="hero-name">Spider-Man (Miles Morales)</h2>
+	</article>
+
+    <article class="hero-item from-top">
+		<a href="heros/captain-america.html">
+			<img src="images/logos héros/Captain America.jpg" alt="Captain America">
+		</a>
+		<h2 class="hero-name">Captain America</h2>
+	</article>
+
+    <article class="hero-item from-right">
+		<a href="heros/iron-man.html">
+			<img src="images/logos héros/Iron Man.jpg" alt="Iron Man">
+		</a>
+		<h2 class="hero-name">Iron Man</h2>
+	</article>
+	
+	<article class="hero-item from-left">
+		<a href="heros/hulk.html">
+			<img src="images/logos héros/Hulk.jpg" alt="Hulk">
+		</a>
+		<h2 class="hero-name">Hulk</h2>
+	</article>
+	
+	<article class="hero-item from-top">
+		<a href="heros/thor.html">
+			<img src="images/logos héros/Thor.jpg" alt="Thor">
+		</a>
+		<h2 class="hero-name">Thor</h2>
+	</article>
+	
+	<article class="hero-item from-top">
+		<a href="heros/hawkeye.html">
+			<img src="images/logos héros/Hawkeye.jpg" alt="Hawkeye">
+		</a>
+		<h2 class="hero-name">Hawkeye</h2>
+	</article>
+	
+	<article class="hero-item from-top">
+		<a href="heros/black-widow.html">
+			<img src="images/logos héros/Black Widow.jpg" alt="Black Widow">
+		</a>
+		<h2 class="hero-name">Black Widow</h2>
+	</article>
+	
+	<article class="hero-item from-top">
+		<a href="heros/wolverine.html">
+			<img src="images/logos héros/Wolverine.jpg" alt="Wolverine">
+		</a>
+		<h2 class="hero-name">Wolverine</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/deadpool.html">
+			<img src="images/logos héros/Deadpool.jpg" alt="Deadpool">
+		</a>
+		<h2 class="hero-name">Deadpool</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="equipes/fantastic-four/reed-richards.html">
+			<img src="images/logos héros/Reed Richards.jpg" alt="Reed Richards">
+		</a>
+		<h2 class="hero-name">Mr. Fantastique</h2>
+	</article>
+	
+	<article class="hero-item from-left">
+		<a href="heros/docteur-strange.html">
+			<img src="images/logos héros/Doctor Strange.jpg" alt="Docteur Strange">
+		</a>
+		<h2 class="hero-name">Docteur Strange</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/black-panther.html">
+			<img src="images/logos héros/Black Panther.jpg" alt="Black Panther">
+		</a>
+		<h2 class="hero-name">Black Panther</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/hank-pym.html">
+			<img src="images/logos héros/Ant-Man (Hank Pym).jpg" alt="Ant-Man">
+		</a>
+		<h2 class="hero-name">Ant-Man (Hank Pym)</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/guepe.html">
+			<img src="images/logos héros/La Guêpe.jpg" alt="Guepe">
+		</a>
+		<h2 class="hero-name">La Guêpe</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/scarlet-witch.html">
+			<img src="images/logos héros/Wanda.jpg" alt="Wanda">
+		</a>
+		<h2 class="hero-name">La Sorcière Rouge</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/quicksilver.html">
+			<img src="images/logos héros/Quicksilver.jpg" alt="Quicksilver">
+		</a>
+		<h2 class="hero-name">Vif-Argent</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/scott-lang.html">
+			<img src="images/logos héros/Ant-Man (Scott Lang).jpg" alt="Ant-Man">
+		</a>
+		<h2 class="hero-name">Ant-Man (Scott Lang)</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/ghost-rider.html">
+			<img src="images/logos héros/Ghost Rider.jpg" alt="Ghost Rider">
+		</a>
+		<h2 class="hero-name">Ghost Rider</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/daredevil.html">
+			<img src="images/logos héros/Daredevil.jpg" alt="Daredevil">
+		</a>
+		<h2 class="hero-name">Daredevil</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/falcon.html">
+			<img src="images/logos héros/Falcon.jpg" alt="Falcon">
+		</a>
+		<h2 class="hero-name">Le Faucon</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/vision.html">
+			<img src="images/logos héros/Vision.jpg" alt="Vision">
+		</a>
+		<h2 class="hero-name">La Vision</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/silver-surfer.html">
+			<img src="images/logos héros/Silver Surfer.jpg" alt="Silver Surfer">
+		</a>
+		<h2 class="hero-name">Le Surfer d'Argent</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/blade.html">
+			<img src="images/logos héros/Blade.jpg" alt="Blade">
+		</a>
+		<h2 class="hero-name">Blade</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/captain-marvel.html">
+			<img src="images/logos héros/Captain Marvel.jpg" alt="Captain Marvel">
+		</a>
+		<h2 class="hero-name">Captain Marvel</h2>
+	</article>
+	
+	<article class="hero-item from-left">
+		<a href="heros/nova.html">
+			<img src="images/logos héros/Nova.jpg" alt="Nova (Richard Rider)">
+		</a>
+		<h2 class="hero-name">Nova (Richard Rider)</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/namor.html">
+			<img src="images/logos héros/Namor.jpg" alt="Namor">
+		</a>
+		<h2 class="hero-name">Namor</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/she-hulk.html">
+			<img src="images/logos héros/Miss-Hulk.jpg" alt="She-Hulk">
+		</a>
+		<h2 class="hero-name">Miss-Hulk</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/sentry.html">
+			<img src="images/logos héros/Sentry.jpg" alt="Sentry">
+		</a>
+		<h2 class="hero-name">Sentry</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/jessica-jones.html">
+			<img src="images/logos héros/Jessica Jones.jpg" alt="Jessica Jones">
+		</a>
+		<h2 class="hero-name">Jessica Jones</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="heros/luke-cage.html">
+			<img src="images/logos héros/Luke Cage.jpg" alt="Luke Cage">
+		</a>
+		<h2 class="hero-name">Luke Cage</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/punisher.html">
+			<img src="images/logos héros/Punisher.jpg" alt="Le Punisher">
+		</a>
+		<h2 class="hero-name">Le Punisher</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/moon-knight.html">
+			<img src="images/logos héros/Moon Knight.jpg" alt="Moon Knight">
+		</a>
+		<h2 class="hero-name">Moon Knight</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="equipes/x-men/charles-xavier.html">
+			<img src="images/logos héros/Professeur X.jpg" alt="Professeur X">
+		</a>
+		<h2 class="hero-name">Professeur X</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="equipes/gardiens/star-lord.html">
+			<img src="images/logos héros/Star-Lord.jpg" alt="Star-Lord">
+		</a>
+		<h2 class="hero-name">Star-Lord</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="equipes/x-men/cyclope.html">
+			<img src="images/logos héros/Cyclope.jpg" alt="Cyclope">
+		</a>
+		<h2 class="hero-name">Cyclope</h2>
+	</article>
+	
+	<article class="hero-item from-bottom">
+		<a href="heros/black-bolt.html">
+			<img src="images/logos héros/Black Bolt.jpg" alt="Black Bolt">
+		</a>
+		<h2 class="hero-name">Flèche Noire</h2>
+	</article>
+	
+	<article class="hero-item from-left">
+		<a href="equipes/spiderverse/jessica-drew.html">
+			<img src="images/logos héros/Spider-Woman.jpg" alt="Spider-Woman">
+		</a>
+		<h2 class="hero-name">Spider-Woman</h2>
+	</article>
+	
+	<article class="hero-item from-right">
+		<a href="equipes/x-men/tornade.html">
+			<img src="images/logos héros/Tornade.jpg" alt="Tornade">
+		</a>
+		<h2 class="hero-name">Tornade</h2>
+	</article>
+
+</section>
+
+<!-- Bouton index complet -->
+<div class="index-btn-wrapper">
+    <a href="tous-les-heros.html" class="index-btn">
+        <span class="index-btn-icon">➔</span>
+        La liste complète des super-héros est disponible en cliquant ici
+    </a>
+</div>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 – Marvel-616</p>
+    <p>
+        Site de fans non officiel — non affilié à Marvel Entertainment ou Disney. Tous droits réservés à leurs ayants droit respectifs.
+    </p>
+    <p>
+        <a href="contact.html">Contact</a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+<button id="backToTop" aria-label="Revenir en haut">↑</button>
+
+</body>
+</html>

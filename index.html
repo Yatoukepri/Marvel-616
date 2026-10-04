@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel-616 - Accueil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Les personnages principaux de l'univers Marvel">
+
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon-32x32.png" type="image/png">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="manifest" href="site.webmanifest">
+    <style>
+        .index-link-line {
+            font-size: 0.95rem;
+            color: #333;
+            margin: 0;
+        }
+        .index-link-word {
+            color: #c41e3a;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .index-link-word:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="page-wrapper">
+
+<div class="background-lines">
+    <span data-line="1"></span>
+    <span data-line="2"></span>
+    <span data-line="3"></span>
+    <span data-line="4"></span>
+    <span data-line="5"></span>
+</div>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <!-- Logo -->
+        <div class="header-logo">
+			<a href="index.html" class="logo-link">
+				<img src="images/Logo Marvel.png" alt="Logo Marvel" class="site-logo">
+			</a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="header-nav">
+		
+		    <button class="burger-btn" aria-label="Ouvrir le menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			
+            <ul class="menu">
+                <li class="menu-item has-submenu">
+                    <span class="menu-title">Menu</span>
+                    <ul class="submenu">
+                        <li><a href="heros.html">Super-héros</a></li>
+                        <li><a href="super-vilains.html">Super-vilains</a></li>
+                        <li><a href="equipes.html">Équipes</a></li>
+						<li><a href="entites.html">Entités</a></li>
+						<li><a href="infinity-stones.html">Les Pierres d'Infinité</a></li>
+						<li><a href="lieux.html">Lieux</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+	<h1 class="site-title">Marvel-616</h1>
+	
+	<!--Bloc de recherche-->
+<aside class="search-box">
+
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Un personnage en particulier ?"
+        aria-label="Recherche sur le site"
+		
+    >
+
+    <button id="search-btn">Je le recherche !</button>
+</aside>
+
+    <!-- Intro -->
+    <section class="intro">
+        <p><strong>Bienvenue sur <span class="intro-underline">Marvel-616</span>.</strong></p>
+        <p>
+            Ici, vous allez découvrir les origines des personnages emblématiques de l'univers Marvel !
+        </p>
+        <p>
+            Héros, super-héros, super-vilains, équipes, entités et autres personnages incontournables : 
+			<br>vous allez découvrir comment ils sont devenus ceux que nous connaissons aujourd’hui, leurs pouvoirs, leurs capacités et les événements à l’origine de ce qu'ils sont.
+        </p>
+        <p><strong><span class="intro-underline">Bonne visite !&nbsp;</span></strong></p>
+    </section>
+	
+    <div class="separator"></div>
+
+    <!-- Récemment en vedette -->
+    <section class="featured-characters">
+        <h4>Récemment en vedette :</h4>
+
+        <div class="featured-grid">
+
+            <a href="heros/wolverine.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/characters/wolverine/images/James_Howlett_29_from_Wolverine_Vol_7_1_Silva_Variant_cover_001.jpg" alt="Wolverine">
+                <span>Wolverine</span>
+            </a>
+
+            <a href="equipes/x-men/jean-grey.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/characters/x-men/jean-grey/images/3k0nZ1j.jpeg" alt="Jean Grey">
+                <span>Jean Grey</span>
+            </a>
+
+            <a href="ennemis/mystique.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/ennemy/mystique/images/7413f35336113ed28c966fdc8d74ba24.jpg" alt="Mystique">
+                <span>Mystique</span>
+            </a>
+
+            <a href="heros/spider-man.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/characters/spider-man/images/amazing_spider_man__800_cover_by_terrydodson_dcg7ukn-414w-2x.jpg" alt="Spider-Man">
+                <span>Spider-Man<br>(Peter Parker)</span>
+            </a>
+
+            <a href="heros/hulk.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/characters/hulk/images/e4a8a543a1e7aae8cd0ed5fd443a739c.jpg" alt="Hulk">
+                <span>Hulk</span>
+            </a>
+
+            <a href="ennemis/scorpion.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/ennemy/scorpion/images/dc686ff67179561daf9fb67aca61b82e.jpg" alt="Le Scorpion">
+                <span>Le Scorpion</span>
+            </a>
+
+            <a href="ennemis/docteur-doom.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/ennemy/fatalis/images/Victor_von_Doom_29_from_Captain_America_Reborn_Vol_1_4_001.jpg" alt="Docteur Fatalis">
+                <span>Docteur Fatalis</span>
+            </a>
+
+        </div>
+    </section>
+
+    <div class="separator"></div>
+
+    <!-- Catégories -->
+    <section class="categories">
+        <h2>Catégories :</h2>
+
+        <div class="category-grid">
+            <a href="heros.html">
+                <img src="images/Logo SH.jpg" alt="Super-héros">
+            </a>
+            <a href="super-vilains.html">
+                <img src="images/Logo SV.jpg" alt="Super-vilains">
+            </a>
+            <a href="equipes.html">
+                <img src="images/Logo Équipes.jpg" alt="Équipes">
+            </a>
+			<a href="entites.html">
+                <img src="images/Logo Entités.jpg" alt="Entités">
+            </a>
+			<a href="infinity-stones.html">
+                <img src="images/Logo Pierres d'Infinité.jpg" alt="Stones">
+            </a>
+			<a href="lieux.html">
+                <img src="images/Logo Lieux.jpg" alt="Lieux">
+            </a>
+        </div>
+    </section>
+	
+	<div class="separator"></div>
+
+    <!-- Carousel -->
+    <section class="carousel-section">
+
+    <div class="carousel">
+        <div class="carousel-track">
+            <!-- Série 1 -->
+            <img src="images/carrousel/apocalypse.jpg" alt="Apocalypse">
+            <img src="images/carrousel/avengers.jpg" alt="Avengers">
+            <img src="images/carrousel/black-panther.jpg" alt="Black Panther">
+            <img src="images/carrousel/bouffon-vert.jpg" alt="Bouffon Vert">
+            <img src="images/carrousel/captain-america.jpg" alt="Captain America">
+            <img src="images/carrousel/charles-xavier.jpg" alt="Charles Xavier">
+			<img src="images/carrousel/moon-knight.jpg" alt="Moon Knight">
+			<img src="images/carrousel/cyclope.jpg" alt="Cyclope">
+            <img src="images/carrousel/daredevil.jpg" alt="Daredevil">
+            <img src="images/carrousel/deadpool.jpg" alt="Deadpool">
+			<img src="images/carrousel/defenders.jpg" alt="Defenders">
+			<img src="images/carrousel/luke-cage.jpg" alt="Luke Cage">
+            <img src="images/carrousel/docteur-strange.jpg" alt="Docteur Strange">
+			<img src="images/carrousel/fatalis.jpg" alt="Docteur Fatalis">
+			<img src="images/carrousel/sentry.jpg" alt="Sentry">
+			<img src="images/carrousel/quicksilver.jpg" alt="Vif-Argent">
+			<img src="images/carrousel/wanda.jpg" alt="Sorcière Rouge">
+            <img src="images/carrousel/galactus.jpg" alt="Galactus">
+            <img src="images/carrousel/ghost-rider.jpg" alt="Ghost Rider">
+            <img src="images/carrousel/hulk.jpg" alt="Hulk">
+			<img src="images/carrousel/carol-danvers.jpg" alt="Miss Marvel">
+			<img src="images/carrousel/black-widow.jpg" alt="Black Widow">
+			<img src="images/carrousel/hawkeye.jpg" alt="hawkeye">
+            <img src="images/carrousel/iron-man.jpg" alt="Iron Man">
+            <img src="images/carrousel/kang.jpg" alt="Kang le Conquérant">
+			<img src="images/carrousel/guepe.jpg" alt="La Guêpe">
+			<img src="images/carrousel/hank-pym.jpg" alt="Hank Pym">
+			<img src="images/carrousel/magneto.jpg" alt="Magnéto">
+			<img src="images/carrousel/namor.jpg" alt="Namor">
+			<img src="images/carrousel/she-hulk.jpg" alt="She-Hulk">
+            <img src="images/carrousel/miles-morales.jpg" alt="Spider-Man (Miles Morales)">
+            <img src="images/carrousel/nova.jpg" alt="Nova">
+			<img src="images/carrousel/black-bolt.jpg" alt="Black Bolt">
+			<img src="images/carrousel/punisher.jpg" alt="Le Punisher">
+			<img src="images/carrousel/scott-lang.jpg" alt="Scott Lang">
+			<img src="images/carrousel/blade.jpg" alt="Blade">
+            <img src="images/carrousel/red-skull.jpg" alt="Crâne Rouge">
+			<img src="images/carrousel/spider-man.jpg" alt="Spider-Man (Peter Parker)">
+            <img src="images/carrousel/thanos.jpg" alt="Thanos">
+			<img src="images/carrousel/vision.jpg" alt="Vision">
+            <img src="images/carrousel/thor.jpg" alt="Thor">
+            <img src="images/carrousel/ultron.jpg" alt="Ultron">
+			<img src="images/carrousel/faucon.jpg" alt="Le Faucon">
+            <img src="images/carrousel/venom.jpg" alt="Venom">
+			<img src="images/carrousel/silver-surfer.jpg" alt="Surfer d'Argent">
+            <img src="images/carrousel/wolverine.jpg" alt="Wolverine">
+			<img src="images/carrousel/xmen.jpg" alt="X-Men">
+
+            <!-- Série 2 (duplication pour boucle infinie) -->
+            <img src="images/carrousel/apocalypse.jpg" alt="Apocalypse">
+            <img src="images/carrousel/avengers.jpg" alt="Avengers">
+            <img src="images/carrousel/black-panther.jpg" alt="Black Panther">
+            <img src="images/carrousel/bouffon-vert.jpg" alt="Bouffon Vert">
+            <img src="images/carrousel/captain-america.jpg" alt="Captain America">
+            <img src="images/carrousel/charles-xavier.jpg" alt="Charles Xavier">
+			<img src="images/carrousel/cyclope.jpg" alt="Cyclope">
+            <img src="images/carrousel/daredevil.jpg" alt="Daredevil">
+            <img src="images/carrousel/deadpool.jpg" alt="Deadpool">
+			<img src="images/carrousel/defenders.jpg" alt="Defenders">
+            <img src="images/carrousel/docteur-strange.jpg" alt="Docteur Strange">
+			<img src="images/carrousel/fatalis.jpg" alt="Docteur Fatalis">
+            <img src="images/carrousel/galactus.jpg" alt="Galactus">
+            <img src="images/carrousel/ghost-rider.jpg" alt="Ghost Rider">
+            <img src="images/carrousel/hulk.jpg" alt="Hulk">
+            <img src="images/carrousel/iron-man.jpg" alt="Iron Man">
+            <img src="images/carrousel/kang.jpg" alt="Kang le Conquérant">
+			<img src="images/carrousel/magneto.jpg" alt="Magnéto">
+            <img src="images/carrousel/miles-morales.jpg" alt="Spider-Man (Miles Morales)">
+            <img src="images/carrousel/nova.jpg" alt="Nova">
+			<img src="images/carrousel/punisher.jpg" alt="Le Punisher">
+            <img src="images/carrousel/red-skull.jpg" alt="Crâne Rouge">
+			<img src="images/carrousel/spider-man.jpg" alt="Spider-Man (Peter Parker)">
+            <img src="images/carrousel/thanos.jpg" alt="Thanos">
+            <img src="images/carrousel/thor.jpg" alt="Thor">
+            <img src="images/carrousel/ultron.jpg" alt="Ultron">
+            <img src="images/carrousel/venom.jpg" alt="Venom">
+            <img src="images/carrousel/wolverine.jpg" alt="Wolverine">
+			<img src="images/carrousel/xmen.jpg" alt="X-Men">
+        </div>
+    </div>
+</section>
+
+	<div class="separator"></div>
+
+	<!-- Lien index toutes les pages -->
+	<p class="index-link-line">
+		En cliquant <a href="toutes-les-pages.html" class="index-link-word">ici</a>, vous accéderez à la liste complète des pages de notre site !
+	</p>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 – Marvel-616</p>
+    <p>
+        Site de fans non officiel — non affilié à Marvel Entertainment ou Disney.
+        Tous droits réservés à leurs ayants droit respectifs.
+    </p>
+    <p>
+        <a href="contact.html">Contact</a>
+    </p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+<button id="backToTop" aria-label="Revenir en haut" title="Retour en haut">↑</button>
+
+</body>
+</html>

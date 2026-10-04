@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats de recherche – Marvel-616</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+	
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon-32x32.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="header-logo">
+            <a href="index.html" class="logo-link">
+                <img src="images/Logo Marvel.png" alt="Logo Marvel">
+            </a>
+        </div>
+		
+		<nav class="header-nav">
+            <button class="burger-btn" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="menu">
+                <li class="menu-item has-submenu">
+                    <span class="menu-title">Menu</span>
+                    <ul class="submenu">
+                        <li><a href="heros.html">Super-héros</a></li>
+                        <li><a href="super-vilains.html">Super-vilains</a></li>
+                        <li><a href="equipes.html">Équipes</a></li>
+						<li><a href="entites.html">Entités</a></li>
+						<li><a href="infinity-stones.html">Les Pierres d'Infinité</a></li>
+						<li><a href="lieux.html">Lieux</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+		
+    </div>
+</header>
+
+<main class="container">
+
+<aside class="search-box">
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Un personnage en particulier ?"
+        aria-label="Recherche sur le site"
+    >
+    <button id="search-btn">Je le recherche !</button>
+</aside>
+
+    <h1 class="site-title">Résultats de recherche</h1>
+
+    <div id="search-results">
+        <p>Chargement des résultats…</p>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 – Marvel-616</p>
+    <p>
+        Site de fans non officiel — non affilié à Marvel Entertainment ou Disney. Tous droits réservés à leurs ayants droit respectifs.
+    </p>
+    <p>
+        <a href="contact.html">Contact</a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+<script src="search-data.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

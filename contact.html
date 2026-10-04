@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel-616 - Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contactez Marvel-616 pour signaler une erreur, un problème technique, proposer une amélioration ou suggérer une nouvelle page.">
+
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon-32x32.png" type="image/png">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="manifest" href="site.webmanifest">
+    <style>
+        .index-link-line {
+            font-size: 0.95rem;
+            color: #333;
+            margin: 0;
+        }
+        .index-link-word {
+            color: #c41e3a;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .index-link-word:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="page-wrapper">
+
+<div class="background-lines">
+    <span data-line="1"></span>
+    <span data-line="2"></span>
+    <span data-line="3"></span>
+    <span data-line="4"></span>
+    <span data-line="5"></span>
+</div>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <!-- Logo -->
+        <div class="header-logo">
+			<a href="index.html" class="logo-link">
+				<img src="images/Logo Marvel.png" alt="Logo Marvel" class="site-logo">
+			</a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="header-nav">
+		
+		    <button class="burger-btn" aria-label="Ouvrir le menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			
+            <ul class="menu">
+                <li class="menu-item has-submenu">
+                    <span class="menu-title">Menu</span>
+                    <ul class="submenu">
+                        <li><a href="heros.html">Super-héros</a></li>
+                        <li><a href="super-vilains.html">Super-vilains</a></li>
+                        <li><a href="equipes.html">Équipes</a></li>
+						<li><a href="entites.html">Entités</a></li>
+						<li><a href="infinity-stones.html">Les Pierres d'Infinité</a></li>
+						<li><a href="lieux.html">Lieux</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+	<h1 class="site-title">Contact</h1>
+	
+	<section class="intro">
+    <p>
+        Une question, une remarque, une suggestion ou une erreur à signaler ?
+    </p>
+    <p>
+        Vous pouvez utiliser le formulaire ci-dessous pour contacter l'équipe de <u>Marvel-616</u>.
+    </p>
+    <p>
+        Que ce soit pour signaler un problème technique, une information erronée ou suggérer
+        une page que vous souhaitez voir ajoutée au site, toutes vos <br>remarques sont les bienvenues !
+    </p>
+</section>
+
+<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+	<input type="hidden" name="access_key" value="250b1f9d-1a14-42e8-92e3-9f47717fa9b7">
+	<input type="hidden" name="subject" value="Nouveau message - Marvel-616">
+	<input type="hidden" name="redirect" value="contact-confirmation.html">
+	<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+	
+<section class="contact-section">
+    <h2>Nous contacter</h2>
+
+    <p>
+        Pour toute demande, vous pouvez nous contacter à l'adresse suivante :
+    </p>
+
+    <p>
+        <strong>📧 E-mail :</strong>
+        <a href="mailto:marvel616contact@gmail.com">marvel616contact@gmail.com</a>
+    </p>
+</section>
+
+<section class="contact-section">
+    <h2>Motif du contact</h2>
+
+    <p>Pour quelle raison souhaitez-vous nous contacter ?</p>
+
+    <select id="contact-reason" name="Motif du contact">
+        <option value="">-- Sélectionnez un motif --</option>
+        <option value="error">Signaler une erreur</option>
+        <option value="bug">Signaler un bug ou un problème technique</option>
+        <option value="improvement">Proposer une amélioration</option>
+        <option value="suggestion">Suggérer une nouvelle page</option>
+        <option value="other">Autre</option>
+    </select>
+</section>
+
+<section class="contact-section">
+    <h2>Votre message</h2>
+
+    <label for="contact-message">
+        Décrivez votre demande :
+    </label>
+
+    <textarea
+        id="contact-message"
+        name="Message"
+        rows="8"
+        placeholder="Écrivez votre message ici..."
+    ></textarea>
+</section>
+
+<section class="contact-section" id="character-suggestion" style="display: none;">
+    <h2>Suggérer une nouvelle page</h2>
+
+    <label for="suggested-character">
+        Nom de la page souhaitée :
+    </label>
+
+    <input
+        type="text"
+        id="suggested-character"
+        name="Page suggérée"
+        placeholder="Ex. : Daredevil, le Wakanda, les Avengers..."
+    >
+
+<label for="suggestion-category">
+    De quelle catégorie s'agit-il ?
+</label>
+
+<select id="suggestion-category" name="Catégorie de la page">
+    <option value="">-- Sélectionnez une catégorie --</option>
+    <option value="Héros / Personnage">Héros / Personnage</option>
+	<option value="Vilain / Antagoniste">Vilain / Antagoniste</option>
+	<option value="Équipe">Équipe</option>
+	<option value="Entité">Entité</option>
+	<option value="Lieu">Lieu</option>
+	<option value="Autre">Autre</option>
+</select>
+
+</section>
+
+<section class="contact-section">
+    <h2>Votre adresse e-mail (obligatoire)</h2>
+
+    <label for="contact-email">
+        Adresse e-mail :
+    </label>
+
+<input
+    type="email"
+    id="contact-email"
+	name="email"
+	autocomplete="email"
+    placeholder="exemple@email.com"
+    required
+>
+</section>
+
+<div class="contact-submit">
+    <button type="submit" id="contact-submit-btn">
+        Envoyer le message
+    </button>
+</div>
+</form>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 – Marvel-616</p>
+	<p>
+		Site de fans non officiel — non affilié à Marvel Entertainment ou Disney.
+		Tous droits réservés à leurs ayants droit respectifs.
+	</p>
+    <p>
+        <a href="contact.html">Contact</a>
+    </p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+<button id="backToTop" aria-label="Revenir en haut" title="Retour en haut">↑</button>
+
+</body>
+</html>
