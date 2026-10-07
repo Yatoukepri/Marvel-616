@@ -1070,7 +1070,7 @@ footer {
 
 @media (max-width: 480px) {
     .heroes-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1273,4 +1273,144 @@ footer {
 #character-suggestion select {
     display: block;
     width: 275px;
+}
+
+/* =========================================
+   MENU — RÉCEMMENT EN VEDETTE
+   TABLETTE / MOBILE
+========================================= */
+
+@media (max-width: 1024px) {
+
+    /*
+     * Réorganisation du contenu :
+     * Catégories avant Récemment en vedette.
+     */
+    main.container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main.container > *:nth-child(1) {
+        order: 1;
+    }
+
+    main.container > *:nth-child(2) {
+        order: 2;
+    }
+
+    main.container > *:nth-child(3) {
+        order: 3;
+    }
+
+    /* Séparateur après l'introduction */
+    main.container > *:nth-child(4) {
+        order: 4;
+    }
+
+    /* Catégories */
+    main.container > *:nth-child(7) {
+        order: 5;
+    }
+
+    /* Séparateur après les catégories */
+    main.container > *:nth-child(8) {
+        order: 6;
+    }
+
+    /* Récemment en vedette */
+    main.container > *:nth-child(5) {
+        order: 7;
+    }
+
+    /* Séparateur après les vedettes */
+    main.container > *:nth-child(6) {
+        order: 8;
+    }
+
+    /* Carousel */
+    main.container > *:nth-child(9) {
+        order: 9;
+    }
+
+    /* Séparateur après le carousel */
+    main.container > *:nth-child(10) {
+        order: 10;
+    }
+
+    /* Lien "toutes les pages" */
+    main.container > *:nth-child(11) {
+        order: 11;
+    }
+
+    /*
+     * 3 images par ligne.
+     */
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*
+     * On retire uniquement la 7e vignette
+     * sur tablette et mobile.
+     */
+    .featured-grid a:nth-child(7) {
+        display: none;
+    }
+	
+	    /* Images équilibrées sans déformation */
+    .featured-grid a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-grid img {
+        width: auto;
+        height: 180px;
+        max-width: 100%;
+        aspect-ratio: auto;
+        object-fit: contain;
+    }
+}
+
+/* =========================================
+   BOUTON LISTE COMPLÈTE
+   TABLETTE / MOBILE
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .category-page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Page Héros */
+    .page-content.category-page > .site-title {
+        order: 1;
+    }
+
+    .page-content.category-page > .index-btn-wrapper {
+        order: 2;
+        margin: 0 0 2rem 0;
+    }
+
+    .page-content.category-page > .heroes-list {
+        order: 3;
+    }
+
+    /* Page Super-Vilains */
+    main.container.category-page > .site-title {
+        order: 1;
+    }
+
+    main.container.category-page > .index-btn-wrapper {
+        order: 2;
+        margin: 0 0 2rem 0;
+    }
+
+    main.container.category-page > .heroes-list {
+        order: 3;
+    }
 }
