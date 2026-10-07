@@ -33,40 +33,116 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* =========================
-       ACCORDÉON (SPIDER-MAN)
-    ========================= */
-    const versionItems = document.querySelectorAll(".version-item");
+   ACCORDÉONS — VERSIONS / COSTUMES
+========================= */
+
+const accordionGroups = document.querySelectorAll(
+    ".character-versions, .costume-accordion"
+);
+
+function updateAccordionHeight(item) {
+
+    const content = item.querySelector(".version-content");
+
+    if (content && item.classList.contains("is-open")) {
+        content.style.height = content.scrollHeight + "px";
+    }
+}
+
+function openAccordionItem(item) {
+
+    const content = item.querySelector(".version-content");
+
+    if (!content) return;
+
+    item.classList.add("is-open");
+
+    content.style.height = content.scrollHeight + "px";
+
+    /*
+     * Les images peuvent finir de charger après
+     * l'ouverture de l'accordéon.
+     * On recalcule alors sa hauteur.
+     */
+    content.querySelectorAll("img").forEach(img => {
+
+        if (!img.complete) {
+
+            img.addEventListener(
+                "load",
+                () => updateAccordionHeight(item),
+                { once: true }
+            );
+        }
+    });
+}
+
+function closeAccordionItem(item) {
+
+    const content = item.querySelector(".version-content");
+
+    if (!content) return;
+
+    content.style.height = "0";
+    item.classList.remove("is-open");
+}
+
+
+/*
+ * Chaque groupe d'accordéon possède maintenant
+ * son propre élément ouvert.
+ */
+accordionGroups.forEach(group => {
+
+    const items = group.querySelectorAll(".version-item");
+
+    if (items.length === 0) return;
+
     let currentOpen = null;
 
-    function openItem(item) {
-        const content = item.querySelector(".version-content");
-        item.classList.add("is-open");
-        content.style.height = content.scrollHeight + "px";
-        currentOpen = item;
-    }
+    /*
+     * Premier élément ouvert automatiquement
+     * dans CHAQUE groupe.
+     */
+    openAccordionItem(items[0]);
+    currentOpen = items[0];
 
-    function closeItem(item) {
-        const content = item.querySelector(".version-content");
-        content.style.height = "0";
-        item.classList.remove("is-open");
-    }
+    items.forEach(item => {
 
-    if (versionItems.length > 0) {
-        openItem(versionItems[0]);
+        const btn = item.querySelector(".version-toggle");
 
-        versionItems.forEach(item => {
-            const btn = item.querySelector(".version-toggle");
-            btn.addEventListener("click", () => {
-                if (item === currentOpen) {
-                    closeItem(item);
-                    currentOpen = null;
-                } else {
-                    if (currentOpen) closeItem(currentOpen);
-                    openItem(item);
-                }
-            });
+        if (!btn) return;
+
+        btn.addEventListener("click", () => {
+
+            /*
+             * Si on clique sur l'élément déjà ouvert,
+             * on le ferme.
+             */
+            if (item === currentOpen) {
+
+                closeAccordionItem(item);
+                currentOpen = null;
+
+                return;
+            }
+
+            /*
+             * Ferme uniquement l'élément ouvert
+             * dans CE groupe.
+             */
+            if (currentOpen) {
+                closeAccordionItem(currentOpen);
+            }
+
+            /*
+             * Ouvre le nouvel élément.
+             */
+            openAccordionItem(item);
+            currentOpen = item;
         });
-    }
+    });
+});
 
 /* =========================
    LIGHTBOX — ZOOM + DRAG (FINAL UX)
@@ -81,6 +157,13 @@ const fullscreenBtn = document.getElementById("fullscreenBtn");
 let isZoomed = false;
 let isDragging = false;
 let hasDragged = false;
+
+let lightboxHistoryActive = false;
+
+// Zoom tactile
+let pinchStartDistance = 0;
+let pinchStartScale = 1;
+let currentScale = 1;
 
 let startX = 0;
 let startY = 0;
@@ -99,28 +182,48 @@ if (lightbox && lightboxImage) {
             lightbox.classList.add("active");
             document.body.classList.add("lightbox-open");
             resetZoom();
+
+            if (window.matchMedia("(max-width: 1024px)").matches) {
+                history.pushState({ lightbox: true }, "", window.location.href);
+                lightboxHistoryActive = true;
+            }
         });
     });
 
     /* ===== FERMETURE ===== */
-    function closeLightbox() {
-		
-		if (document.fullscreenElement) {
-			if (document.exitFullscreen) {
-				document.exitFullscreen();
-			} else if (document.webkitExitFullscreen) {
-				document.webkitExitFullscreen();
-			} else if (document.msExitFullscreen) {
-				document.msExitFullscreen();
-			}
-		}
-		
-        lightbox.classList.remove("active");
-        document.body.classList.remove("lightbox-open");
-        resetZoom();
+function closeLightbox(fromHistory = false) {
+
+    // Sur mobile/tablette, le bouton Retour doit simplement
+    // fermer la lightbox au lieu de quitter la page.
+    if (lightboxHistoryActive && !fromHistory) {
+        lightboxHistoryActive = false;
+        history.back();
+        return;
     }
 
+    if (document.fullscreenElement) {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+
+    lightbox.classList.remove("active");
+    document.body.classList.remove("lightbox-open");
+    resetZoom();
+}
+
     closeBtn.addEventListener("click", closeLightbox);
+	
+	window.addEventListener("popstate", () => {
+    if (lightbox.classList.contains("active")) {
+        lightboxHistoryActive = false;
+        closeLightbox(true);
+    }
+});
 	
 	if (fullscreenBtn) {
     fullscreenBtn.addEventListener("click", () => {
@@ -156,25 +259,98 @@ if (lightbox && lightboxImage) {
         }
     });
 
-    /* ===== CLICK IMAGE → ZOOM / DÉZOOM ===== */
-    lightboxImage.addEventListener("click", e => {
-        e.stopPropagation();
+/* ===== CLICK IMAGE => ZOOM / DÉZOOM ===== */
+lightboxImage.addEventListener("click", e => {
 
-        // 🔑 si un drag a eu lieu → on ignore le clic
-        if (hasDragged) {
-            hasDragged = false;
-            return;
-        }
+    // Sur mobile/tablette : aucun zoom au clic
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+        return;
+    }
 
-        isZoomed = !isZoomed;
+    e.stopPropagation();
 
-        if (!isZoomed) {
-            resetZoom();
-        } else {
-            lightboxImage.style.cursor = "grab";
-            updateTransform();
-        }
-    });
+    // si un drag a eu lieu => on ignore le clic
+    if (hasDragged) {
+        hasDragged = false;
+        return;
+    }
+
+    isZoomed = !isZoomed;
+
+    if (!isZoomed) {
+        resetZoom();
+	} else {
+		currentScale = ZOOM_SCALE;
+		lightboxImage.style.cursor = "grab";
+		updateTransform();
+}
+});
+
+/* ===== ZOOM PAR PINCEMENT — MOBILE / TABLETTE ===== */
+
+lightboxImage.addEventListener("touchstart", e => {
+
+    if (!window.matchMedia("(max-width: 1024px)").matches) {
+        return;
+    }
+
+    if (e.touches.length === 2) {
+
+        e.preventDefault();
+
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+
+        pinchStartDistance = Math.hypot(dx, dy);
+        pinchStartScale = currentScale;
+    }
+
+}, { passive: false });
+
+
+lightboxImage.addEventListener("touchmove", e => {
+
+    if (!window.matchMedia("(max-width: 1024px)").matches) {
+        return;
+    }
+
+    if (e.touches.length === 2) {
+
+        e.preventDefault();
+
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+
+        const currentDistance = Math.hypot(dx, dy);
+
+        if (pinchStartDistance === 0) return;
+
+        const scaleChange = currentDistance / pinchStartDistance;
+
+        currentScale = Math.min(
+            Math.max(pinchStartScale * scaleChange, 1),
+            ZOOM_SCALE
+        );
+
+        isZoomed = currentScale > 1;
+
+        updateTransform();
+    }
+
+}, { passive: false });
+
+
+lightboxImage.addEventListener("touchend", e => {
+
+    if (!window.matchMedia("(max-width: 1024px)").matches) {
+        return;
+    }
+
+    if (e.touches.length < 2) {
+        pinchStartDistance = 0;
+    }
+
+});
 
     /* ===== DÉBUT DRAG ===== */
     lightboxImage.addEventListener("mousedown", e => {
@@ -221,24 +397,165 @@ if (lightbox && lightboxImage) {
     });
 
     /* ===== RESET ===== */
-    function resetZoom() {
-        isZoomed = false;
-        isDragging = false;
-        hasDragged = false;
+	function resetZoom() {
+		isZoomed = false;
+		isDragging = false;
+		hasDragged = false;
 
-        offsetX = 0;
-        offsetY = 0;
+		currentScale = 1;
+		pinchStartDistance = 0;
+		pinchStartScale = 1;
 
-        lightboxImage.style.cursor = "zoom-in";
-        updateTransform();
-    }
+		offsetX = 0;
+		offsetY = 0;
+
+		lightboxImage.style.cursor = "zoom-in";
+		updateTransform();
+	}
 
     function updateTransform() {
-        lightboxImage.style.transform =
-            `translate(${offsetX}px, ${offsetY}px) scale(${isZoomed ? ZOOM_SCALE : 1})`;
-    }
+    lightboxImage.style.transform =
+        `translate(${offsetX}px, ${offsetY}px) scale(${currentScale})`;
+	}
 }
 
+/* =========================================================
+   ORIGINES — IMAGES RESPONSIVES
+   TABLETTE ET MOBILE
+========================================================= */
+
+function updateOriginsMobileImages() {
+
+    const isTabletOrMobile =
+        window.matchMedia("(max-width: 1024px)").matches;
+
+    document.querySelectorAll(".origins-content").forEach(originsContent => {
+
+        const originsText = originsContent.querySelector(".origins-text");
+        const originsImages = originsContent.querySelector(".origins-images");
+
+        if (!originsText || !originsImages) {
+            return;
+        }
+
+        const mobileImages = [
+            ...originsImages.querySelectorAll("img.origin-mobile-only")
+        ];
+
+        if (mobileImages.length === 0) {
+            return;
+        }
+
+        /* =========================
+           PC
+        ========================= */
+
+        if (!isTabletOrMobile) {
+
+            originsImages.style.removeProperty("height");
+            originsImages.style.removeProperty("justify-content");
+
+            mobileImages.forEach(img => {
+                img.style.removeProperty("display");
+            });
+
+            return;
+        }
+
+        /* =========================
+           TABLETTE / MOBILE
+        ========================= */
+
+        const availableHeight =
+            originsText.getBoundingClientRect().height;
+
+        if (availableHeight <= 0) {
+            return;
+        }
+
+        /*
+         * Toutes les images sont temporairement affichées
+         * afin de connaître leur hauteur réelle.
+         */
+        mobileImages.forEach(img => {
+            img.style.display = "block";
+        });
+
+        /*
+         * La colonne images prend exactement
+         * la hauteur du texte.
+         */
+        originsImages.style.height = `${availableHeight}px`;
+        originsImages.style.justifyContent = "space-between";
+
+        let usedHeight = 0;
+        let visibleCount = 0;
+
+        /*
+         * On ajoute les images une par une.
+         * Dès qu'une image ne peut plus tenir,
+         * les suivantes sont masquées.
+         */
+        for (const img of mobileImages) {
+
+            const imageHeight =
+                img.getBoundingClientRect().height;
+
+            if (imageHeight <= 0) {
+                continue;
+            }
+
+            if (usedHeight + imageHeight > availableHeight) {
+                break;
+            }
+
+            usedHeight += imageHeight;
+            visibleCount++;
+        }
+
+        /*
+         * Affiche uniquement les images qui peuvent tenir.
+         */
+        mobileImages.forEach((img, index) => {
+
+            img.style.display =
+                index < visibleCount ? "block" : "none";
+
+        });
+    });
+}
+
+
+/* Calcul initial */
+updateOriginsMobileImages();
+
+
+/* Recalcul lorsque les images terminent leur chargement */
+document.querySelectorAll(
+    ".origins-images img.origin-mobile-only"
+).forEach(img => {
+
+    img.addEventListener("load", () => {
+        updateOriginsMobileImages();
+    });
+
+});
+
+
+/* Recalcul lors d'un changement de taille */
+let originsResizeFrame = null;
+
+window.addEventListener("resize", () => {
+
+    if (originsResizeFrame) {
+        cancelAnimationFrame(originsResizeFrame);
+    }
+
+    originsResizeFrame = requestAnimationFrame(() => {
+        updateOriginsMobileImages();
+    });
+
+});
 	
 /* ===========
    CARROUSEL
@@ -351,16 +668,33 @@ document.querySelectorAll(".teams-grid").forEach(teamsGrid => {
 });
 
 /* =========================
-   ENNEMIS – GRILLE OPTIMALE (VERSION DÉFINITIVE)
+   ENNEMIS – GRILLE ADAPTATIVE
 ========================= */
 
-window.addEventListener("load", () => {
+function updateEnemyGrids() {
+
     document.querySelectorAll(".enemies-grid").forEach(enemiesGrid => {
 
-        const enemies = enemiesGrid.querySelectorAll(".enemy-card");
+        const enemies = [...enemiesGrid.querySelectorAll(".enemy-card")];
         const count = enemies.length;
 
-        enemiesGrid.classList.remove("cols-2", "cols-3", "cols-4", "cols-5");
+        /* Nettoyage */
+        enemiesGrid.classList.remove(
+            "cols-2",
+            "cols-3",
+            "cols-4",
+            "cols-5",
+            "mobile-balanced"
+        );
+
+    enemies.forEach(enemy => {
+		enemy.style.removeProperty("--enemy-span");
+		enemy.style.removeProperty("--enemy-height");
+	});
+
+        /* =========================
+           DESKTOP
+        ========================= */
 
         let cols;
 
@@ -374,6 +708,7 @@ window.addEventListener("load", () => {
             cols = 4;
         } else {
             const remainderWith5 = count % 5;
+
             if (remainderWith5 === 1 || remainderWith5 === 2) {
                 cols = 4;
             } else {
@@ -382,8 +717,91 @@ window.addEventListener("load", () => {
         }
 
         enemiesGrid.classList.add(`cols-${cols}`);
+
+        /* =========================
+           MOBILE / TABLETTE
+        ========================= */
+
+        if (window.matchMedia("(max-width: 1024px)").matches && count >= 5) {
+
+            enemiesGrid.classList.add("mobile-balanced");
+
+            /*
+             * Maximum 4 images par ligne.
+             */
+            const rows = Math.ceil(count / 4);
+
+            /*
+             * Nombre minimum d'images par ligne.
+             */
+            const base = Math.floor(count / rows);
+
+            /*
+             * Nombre de lignes ayant
+             * une image supplémentaire.
+             */
+            const extra = count % rows;
+
+            const rowSizes = Array(rows).fill(base);
+
+            for (let i = 0; i < extra; i++) {
+                rowSizes[i]++;
+            }
+
+            let enemyIndex = 0;
+
+            rowSizes.forEach(rowSize => {
+
+                /*
+                 * 12 colonnes CSS :
+                 *
+                 * 2 images = 6 colonnes
+                 * 3 images = 4 colonnes
+                 * 4 images = 3 colonnes
+                 */
+                const span = 12 / rowSize;
+
+/*
+ * Hauteur adaptée au nombre d'images
+ * sur la ligne.
+ */
+let imageHeight;
+
+if (rowSize === 2) {
+    imageHeight = 220;
+} else if (rowSize === 3) {
+    imageHeight = 190;
+} else {
+    imageHeight = 160;
+}
+
+for (let i = 0; i < rowSize; i++) {
+
+    if (enemies[enemyIndex]) {
+
+        enemies[enemyIndex].style.setProperty(
+            "--enemy-span",
+            span
+        );
+
+        enemies[enemyIndex].style.setProperty(
+            "--enemy-height",
+            `${imageHeight}px`
+        );
+
+        enemyIndex++;
+    }
+}
+            });
+        }
     });
-});
+}
+
+/* Au chargement */
+updateEnemyGrids();
+
+/* Si la largeur de la fenêtre change */
+window.addEventListener("resize", updateEnemyGrids);
 
 /* =========================
    SEARCH — GLOBAL SITE
@@ -640,22 +1058,27 @@ if (
 
         const image = link.querySelector("img");
 
-        // CAS 1 : lien contenant une image
-        if (image) {
+		// CAS 1 : lien contenant une image
+		if (image) {
 
-            link.addEventListener("click", event => {
-                event.preventDefault();
-                event.stopPropagation();
+			link.addEventListener("click", event => {
+				event.preventDefault();
+				event.stopPropagation();
 
-                const lightbox = document.getElementById("lightbox");
-                const lightboxImage = document.getElementById("lightboxImage");
+				const lightbox = document.getElementById("lightbox");
+				const lightboxImage = document.getElementById("lightboxImage");
 
-                if (!lightbox || !lightboxImage) return;
+				if (!lightbox || !lightboxImage) return;
 
-                lightboxImage.src = image.src;
-                lightbox.classList.add("active");
-                document.body.classList.add("lightbox-open");
-            });
+				lightboxImage.src = image.src;
+				lightbox.classList.add("active");
+				document.body.classList.add("lightbox-open");
+
+				if (window.matchMedia("(max-width: 1024px)").matches) {
+					history.pushState({ lightbox: true }, "", window.location.href);
+					lightboxHistoryActive = true;
+				}
+			});
 
             // L'image est maintenant considérée comme une image de lightbox
             image.classList.add("lightbox-trigger");
