@@ -882,6 +882,27 @@ body.lightbox-open {
 }
 
 /* =========================
+   RÉPARTITION DES GRILLES
+   ENNEMIS - MOBILE / TABLETTE
+========================= */
+
+.enemies-grid.mobile-balanced {
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.enemies-grid.mobile-balanced .enemy-card {
+    grid-column: span var(--enemy-span);
+}
+
+.enemies-grid.mobile-balanced .enemy-card img {
+    width: auto;
+    height: var(--enemy-height);
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* =========================
     RESPONSIVE - INTERMÉDIAIRE (max-width: 900px)
 ========================= */
 
@@ -983,10 +1004,13 @@ body.lightbox-open {
         text-align: left;
     }
     
-    /* Images mobiles uniquement */
-    .origins-images img.origin-mobile-only {
-        display: block;
-    }
+    /* =========================
+       GRILLES D'ENNEMIS - IMAGES
+       Hauteur harmonisée sur tablette/mobile
+    ========================= */
+
+    .enemies-grid {
+    gap: 0.8rem;
 }
 
 /* =========================
@@ -1126,6 +1150,8 @@ body.lightbox-open {
     .ff-row.reverse .ff-text:nth-child(3)  { order: 3; }  /* texte Ben    → col1 row2 */
     .ff-row.reverse .ff-image:nth-child(4) { order: 4; }  /* image Ben    → col2 row2 */
 
+	}
+	
 }
 
 /* Variante accordéon costumes */
@@ -1749,12 +1775,39 @@ body.lightbox-open {
 ========================= */
 
 @media (max-width: 768px) {
+
     .story-grid-1x3 {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /*
+     * Inhumains notables :
+     * 4 images par ligne sur tablette/mobile
+     */
     .story-grid-3x6 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /*
+     * Images de même hauteur sans forcer leur largeur
+     */
+    .story-grid-3x6 figure {
+        align-items: center;
+    }
+
+    .story-grid-3x6 figure img {
+        width: auto;
+        height: 160px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    /*
+     * L'espace vide entre Kamala Khan et Thane
+     * n'est plus nécessaire sur tablette/mobile.
+     */
+    .story-grid-3x6 .grid-empty {
+        display: none;
     }
 
     .story-centered-image-large img {
@@ -1763,9 +1816,20 @@ body.lightbox-open {
 }
 
 @media (max-width: 480px) {
-    .story-grid-1x3,
+
+    .story-grid-1x3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*
+     * On conserve 4 images par ligne sur mobile.
+     */
     .story-grid-3x6 {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .story-grid-3x6 figure img {
+        height: 130px;
     }
 }
 
@@ -2007,18 +2071,6 @@ body.lightbox-open {
     margin-top: 0;
 }
 
-/* Cache uniquement les <br> placés juste après une image mobile */
-.origins-images img.origin-mobile-only + br {
-    display: none;
-}
-
-/* Sur mobile, on réaffiche ces <br> */
-@media (max-width: 768px) {
-    .origins-images img.origin-mobile-only + br {
-        display: block;
-    }
-}
-
 /* =========================================================
    PAGE SENTINELLES — CHANGEMENT RESPONSIVE MOBILE
 ========================================================= */
@@ -2180,5 +2232,74 @@ body.lightbox-open {
     /* Les deux images occupent leur moitié de la largeur */
     .infinity-intro-blocks .block-image img {
         width: 100%;
+    }
+}
+
+/* =========================================================
+   ORIGINES — TEXTE 70% / IMAGES 30%
+   TABLETTE ET MOBILE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .origins-content {
+        grid-template-columns: 6fr 4fr;
+    }
+
+}
+
+/* =========================================================
+   ORIGINES — IMAGES RESPONSIVES
+   TABLETTE ET MOBILE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    /* Les <br> entre les images ne servent plus */
+    .origins-images br {
+        display: none !important;
+    }
+
+    /*
+     * Les images gardent leurs proportions naturelles.
+     * Leur largeur est limitée à la colonne disponible.
+     */
+    .origins-images img.origin-mobile-only {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    /*
+     * Le JavaScript répartit automatiquement
+     * l'espace disponible entre les images.
+     */
+    .origins-images {
+		gap: 0;
+		justify-content: space-between;
+		overflow: hidden;
+	}
+}
+
+/* =========================================================
+   COSTUME — ACCORDÉON SOUS LE TEXTE
+   TABLETTE ET MOBILE
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .costume-variant {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .costume-description {
+        order: 1;
+    }
+
+    .costume-accordion {
+        order: 2;
     }
 }
