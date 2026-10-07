@@ -170,7 +170,7 @@ const SEARCH_INDEX = [
 	title : "La Sorcière Rouge (Wanda Maximoff)",
 	url : "heros/scarlet-witch.html",
 	type : ["Héros", "Ennemi"],
-	content : "Sorcière Sorciere Rouge Scarlet Witch Wanda Maximoff Vif Argent Quicksilver Pietro Magneto Vision Mutant X-men sorcière magie chaos strange transie wundagore avengers confrérie defenders"
+	content : "Sorcière Sorciere Rouge Scarlet Witch Wanda Maximoff Vif Argent Quicksilver Pietro Magneto Vision Mutant X-men sorcière magie chaos strange transie wundagore avengers confrerie confrérie defenders"
   },
   {
 	title : "Vif-Argent (Pietro Maximoff)",
@@ -374,7 +374,7 @@ const SEARCH_INDEX = [
 	title : "Malicia (Anna Marie)",
 	url : "equipes/x-men/malicia.html",
 	type : ["Héros"],
-	content : "Malicia Rogue Anna Marie mutante xmen x-men confrérie mauvais"
+	content : "Malicia Rogue Anna Marie mutante xmen x-men confrérie confrerie mauvais"
   },
   {
 	title : "Psylocke (Betsy Braddock)",
@@ -506,7 +506,7 @@ const SEARCH_INDEX = [
 	title : "Magnéto (Max Eisenhardt)",
 	url : "ennemis/magneto.html",
 	type : ["Ennemi"],
-	content : "magnéto max eisenhardt erik lehnsherr magnus magnétisme mutant x-men allemagne nazi auschwitz essex juif pietro wanda vif argent sorcière rouge astéroide confrérie des mauvais mutants charles xavier wolverine"
+	content : "magneto magnéto max eisenhardt erik lehnsherr magnus magnétisme mutant x-men allemagne nazi auschwitz essex juif pietro wanda vif argent sorcière rouge astéroide confrerie confrérie des mauvais mutants charles xavier wolverine"
   },
   {
 	title : "Méphisto",
@@ -1067,10 +1067,10 @@ const SEARCH_INDEX = [
 	content : "Defenders Equipe Héros Docteur Strange Hulk Namor Surfer Argent Silver Clea Chevalier Noir Black Knight Valkyrie Hawkeye Luke Cage Power Man Daredevil Chose Hank Pym Ant Man Red Guardian Howard duck Miss Marvel Spider Moon Faucon Falcon Havok Panther Ghost Rider Fauve Thing Fantastique Wonder Captain America Sorciere rouge wanda vision angel iceberg cloud seraph candy andromeda manslaughter wolverine darkhawk namorita punisher sleepwalker nomad thunderstrike war machine vega nova deadpool shadow cadaver fist US Agent épée dagger deathlok drax"
   },
   {
-	title : "Le Spider-Verse",
+	title : "Les Web Warriors",
 	url : "equipes/spider-verse.html",
 	type : ["Équipe", "Héros"],
-	content : "Spider Verse Equipe Héros Totem Araignee toile vie destin héritiers morlun terre-1 peter parker miles morales gwen scarlet ben reilly kaine woman julia carpenter jessica drew superior 2099 silk punk noir ham girl uk doppelganger sp//dr peni cosmic india last stand mangaverse bitch 1602 ma'am Terre-616 Terre-65 Terre-928 Terre-138 Terre-90214 Terre-8311 Terre-982 Terre-833 Terre-14512 Terre-13 Terre-50101 Terre-312500 Terre-2301 Terre-807128 Terre-311 Terre-3123"
+	content : "Web Warriors Spider Verse Equipe Héros Totem Araignee toile vie destin héritiers morlun terre-1 peter parker miles morales gwen scarlet ben reilly kaine woman julia carpenter jessica drew superior 2099 silk punk noir ham girl uk doppelganger sp//dr peni cosmic india last stand mangaverse bitch 1602 ma'am Terre-616 Terre-65 Terre-928 Terre-138 Terre-90214 Terre-8311 Terre-982 Terre-833 Terre-14512 Terre-13 Terre-50101 Terre-312500 Terre-2301 Terre-807128 Terre-311 Terre-3123"
   },
   {
 	title : "Les Sinister Six",
@@ -1094,7 +1094,7 @@ const SEARCH_INDEX = [
 	title : "Les Quatre Fantastiques",
 	url : "equipes/fantastic-four.html",
 	type : ["Équipe", "Héros"],
-	content : "Quatre Fantastiques Fantastic Four Reed Richards Susan Sue Storm Johnny Ben Grimm Mister Mr Fantastique Femme invisible Torche humaine Chose Thing Baxter Building Marvel-1 Fatalis Doom Galactus Kang Crystal Ghost Rider Scott Lang Hulk Miss Luke Cage Medusa Black Panther Tornade Spider Man Wolverine"
+	content : "Quatre Fantastiques Fantastic Four FF Reed Richards Susan Sue Storm Johnny Ben Grimm Mister Mr Fantastique Femme invisible Torche humaine Chose Thing Baxter Building Marvel-1 Fatalis Doom Galactus Kang Crystal Ghost Rider Scott Lang Hulk Miss Luke Cage Medusa Black Panther Tornade Spider Man Wolverine"
   },
   {
 	title : "Les Gardiens de la Galaxie",
@@ -1136,7 +1136,7 @@ const SEARCH_INDEX = [
 	title : "La Confrérie des Mauvais Mutants",
 	url : "equipes/brotherhood-evil-mutants.html",
 	type : ["Ennemi", "Équipe"],
-	content : "Confrérie Mauvais Mutants Brotherhood Evil Magneto Mystique Vif-Argent Quicksilver Wanda Scarlet witch Sorcière rouge Abyss Alpha Avalanche Burner Cerveau Colosse Crapaud Destinée Exodus Fever Pitch Forge Lifter Lorelei Malicia Martinique Wyngarde Masque Morlocks Peeper Phantasia Post Pyro Sabretooth Dents Sabre Sauron Shocker Slither Unus"
+	content : "Confrérie confrerie Mauvais Mutants Brotherhood Evil Magneto Mystique Vif-Argent Quicksilver Wanda Scarlet witch Sorcière rouge Abyss Alpha Avalanche Burner Cerveau Colosse Crapaud Destinée Exodus Fever Pitch Forge Lifter Lorelei Malicia Martinique Wyngarde Masque Morlocks Peeper Phantasia Post Pyro Sabretooth Dents Sabre Sauron Shocker Slither Unus"
   },
   {
 	title : "Le Club des Damnés",
