@@ -1286,60 +1286,60 @@ footer {
      * Réorganisation du contenu :
      * Catégories avant Récemment en vedette.
      */
-    main.container {
-        display: flex;
-        flex-direction: column;
-    }
+    main.container:has(.featured-grid) {
+    display: flex;
+    flex-direction: column;
+}
 
-    main.container > *:nth-child(1) {
+    main.container:has(.featured-grid) > *:nth-child(1) {
         order: 1;
     }
 
-    main.container > *:nth-child(2) {
+    main.container:has(.featured-grid) > *:nth-child(2) {
         order: 2;
     }
 
-    main.container > *:nth-child(3) {
+    main.container:has(.featured-grid) > *:nth-child(3) {
         order: 3;
     }
 
     /* Séparateur après l'introduction */
-    main.container > *:nth-child(4) {
+    main.container:has(.featured-grid) > *:nth-child(4) {
         order: 4;
     }
 
     /* Catégories */
-    main.container > *:nth-child(7) {
+    main.container:has(.featured-grid) > *:nth-child(7) {
         order: 5;
     }
 
     /* Séparateur après les catégories */
-    main.container > *:nth-child(8) {
+    main.container:has(.featured-grid) > *:nth-child(8) {
         order: 6;
     }
 
     /* Récemment en vedette */
-    main.container > *:nth-child(5) {
+    main.container:has(.featured-grid) > *:nth-child(5) {
         order: 7;
     }
 
     /* Séparateur après les vedettes */
-    main.container > *:nth-child(6) {
+    main.container:has(.featured-grid) > *:nth-child(6) {
         order: 8;
     }
 
     /* Carousel */
-    main.container > *:nth-child(9) {
+    main.container:has(.featured-grid) > *:nth-child(9) {
         order: 9;
     }
 
     /* Séparateur après le carousel */
-    main.container > *:nth-child(10) {
+    main.container:has(.featured-grid) > *:nth-child(10) {
         order: 10;
     }
 
     /* Lien "toutes les pages" */
-    main.container > *:nth-child(11) {
+    main.container:has(.featured-grid) > *:nth-child(11) {
         order: 11;
     }
 
