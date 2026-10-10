@@ -50,25 +50,25 @@ const SEARCH_INDEX = [
     title: "Spider-Man (Peter Parker) (Terre-616)",
     url: "heros/spider-man.html",
     type: ["Héros"],
-    content: "Spider-Man Terre-616 Peter Parker New York Araignée Toile Avengers Defenders Fantastiques"
+    content: "Spider-Man Terre-616 Peter Parker New York Araignée Toile Avengers Defenders Fantastiques spiderman"
   },
   {
     title: "Spider-Man (Miles Morales) (Terre-1610)",
     url: "heros/miles-morales.html",
     type: ["Héros"],
-    content: "Spider-Man Miles Morales Terre-1610 Peter Parker New York Araignée Brooklyn Toile avengers spiderverse defenders"
+    content: "Spider-Man Miles Morales Terre-1610 Peter Parker New York Araignée Brooklyn Toile avengers spiderverse defenders spiderman"
   },
   {
     title: "Captain America (Steve Rogers)",
     url: "heros/captain-america.html",
     type: ["Héros"],
-    content: "Captain America Steve Rogers Terre-616 Steven soldat bucky barnes hydra avengers bouclier envahisseurs defenders"
+    content: "Captain America Steve Rogers Terre-616 Steven soldat bucky barnes hydra avengers bouclier envahisseurs defenders captainamerica"
   },
   {
     title: "Iron Man (Tony Stark)",
     url: "heros/iron-man.html",
     type: ["Héros"],
-    content: "Tony Stark iron man armure Avengers Terre-616 anthony yinsen illuminati gardiens galaxie club damnés"
+    content: "Tony Stark iron man armure Avengers Terre-616 anthony yinsen illuminati gardiens galaxie club damnés ironman"
   },
   {
     title: "Hulk (Bruce Banner)",
@@ -92,7 +92,7 @@ const SEARCH_INDEX = [
 	title : "Black Widow (Natasha Romanoff)",
 	url : "heros/black-widow.html",
 	type : ["Héros"],
-	content : "Natasha Romanoff avengers espion black widow veuve noire russie russe"
+	content : "Natasha Romanoff avengers espion black widow veuve noire russie russe blackwidow"
   },
   {
 	title : "Hawkeye (Clint Barton)",
@@ -116,7 +116,7 @@ const SEARCH_INDEX = [
 	title : "Docteur Strange (Stephen Strange)",
 	url : "heros/docteur-strange.html",
 	type : ["Héros"],
-	content : "Docteur Strange Stephen Sorcier Supreme Ancien mystique Tibet cape agamotto vishanti cyttorak oshtur dormammu magie defenders illuminati avengers"
+	content : "Docteur Strange Stephen Sorcier Supreme Ancien mystique Tibet cape agamotto vishanti cyttorak oshtur dormammu magie defenders illuminati avengers docteurstrange"
   },
   {
 	title : "Mr. Fantastique (Reed Richards)",
@@ -146,19 +146,19 @@ const SEARCH_INDEX = [
 	title : "Black Panther (T'Challa)",
 	url : "heros/black-panther.html",
 	type : ["Héros"],
-	content : "black panther t'challa wakanda vibranium adamantium roi afrique bast griffe defenders avengers illuminati fantastique"
+	content : "black panther t'challa wakanda vibranium adamantium roi afrique bast griffe defenders avengers illuminati fantastique blackpanther"
   },
   {
 	title : "Ant-Man (Hank Pym)",
 	url : "heros/hank-pym.html",
 	type : ["Héros"],
-	content : "ant man hank pym scott lang janet hope van dyne guepe ultron tony stark avengers defenders scientifique fourmi henry"
+	content : "ant man hank pym scott lang janet hope van dyne guepe ultron tony stark avengers defenders scientifique fourmi henry antman"
   },
   {
 	title : "Ant-Man (Scott Lang)",
 	url : "heros/scott-lang.html",
 	type : ["Héros"],
-	content : "ant man scott lang hank pym janet van dyne guepe avengers fourmi"
+	content : "ant man scott lang hank pym janet van dyne guepe avengers fourmi antman"
   },
   {
 	title : "La Guêpe (Janet Van Dyne)",
@@ -170,25 +170,25 @@ const SEARCH_INDEX = [
 	title : "La Sorcière Rouge (Wanda Maximoff)",
 	url : "heros/scarlet-witch.html",
 	type : ["Héros", "Ennemi"],
-	content : "Sorcière Sorciere Rouge Scarlet Witch Wanda Maximoff Vif Argent Quicksilver Pietro Magneto Vision Mutant X-men sorcière magie chaos strange transie wundagore avengers confrerie confrérie defenders"
+	content : "Sorcière Sorciere Rouge Scarlet Witch Wanda Maximoff Vif Argent Quicksilver Pietro Magneto Vision Mutant X-men sorcière magie chaos strange transie wundagore avengers confrerie confrérie defenders sorciererouge scarletwitch"
   },
   {
 	title : "Vif-Argent (Pietro Maximoff)",
 	url : "heros/quicksilver.html",
 	type : ["Héros"],
-	content : "Vif Argent Quicksilver Pietro Maximoff Wanda Scarlet Witch Sorciere Rouge Mutant X-Men Avengers Magneto Wundagore Transie Vitesse Rapide"
+	content : "Vif Argent Quicksilver Pietro Maximoff Wanda Scarlet Witch Sorciere Rouge Mutant X-Men Avengers Magneto Wundagore Transie Vitesse Rapide vifargent"
   },
   {
 	title : "Ghost Rider (Johnny Blaze)",
 	url : "heros/ghost-rider.html",
 	type : ["Anti-Héros"],
-	content : "ghost rider johnny johnathon blaze crane feu flamme demon démon mephisto esprit vengeance pacte zarathos satan moto monstre ame péchés midnight sons chaine fusil penitence enfer defenders avengers fantastiques"
+	content : "ghost rider johnny johnathon blaze crane feu flamme demon démon mephisto esprit vengeance pacte zarathos satan moto monstre ame péchés midnight sons chaine fusil penitence enfer defenders avengers fantastiques ghostrider"
   },
   {
 	title : "Ghost Rider (Robbie Reyes)",
 	url : "heros/robbie-reyes.html",
 	type : ["Héros"],
-	content : "ghost rider roberto robbie reyes eli morrow dodge charter gabe johnny blaze los angeles ame midnight sons avengers racers"
+	content : "ghost rider roberto robbie reyes eli morrow dodge charter gabe johnny blaze los angeles ame midnight sons avengers racers ghostrider"
   },
   {
 	title : "Daredevil (Matt Murdock)",
@@ -224,7 +224,7 @@ const SEARCH_INDEX = [
 	title : "Le Surfer d'Argent (Norrin Radd)",
 	url : "heros/silver-surfer.html",
 	type : ["Héros"],
-	content : "surfer surfeur argent silver galactus heraut herald quatre fantastiques fantastic four avengers defenders cosmic cosmique espace zenn la shalla bal"
+	content : "surfer surfeur argent silver galactus heraut herald quatre fantastiques fantastic four avengers defenders cosmic cosmique espace zenn la shalla bal surferdargent surfeurdargent silversurfer"
   },
   {
 	title : "Blade (Erik Brooks)",
@@ -236,7 +236,7 @@ const SEARCH_INDEX = [
 	title : "Captain Marvel (Carol Danvers)",
 	url : "heros/captain-marvel.html",
 	type : ["Héros"],
-	content : "captain marvel miss carol danvers binaire warbird vers car-ell kree skrull mar-vell lawson malicia avengers defenders espace cosmique cosmic"
+	content : "captain marvel miss carol danvers binaire warbird vers car-ell kree skrull mar-vell lawson malicia avengers defenders espace cosmique cosmic captainmarvel"
   },
   {
 	title : "Nova (Richard Rider)",
@@ -254,7 +254,7 @@ const SEARCH_INDEX = [
 	title : "Miss-Hulk (Jennifer Walters)",
 	url : "heros/she-hulk.html",
 	type : ["Héros"],
-	content : "Miss She Hulk Jennifer Walters Bruce Banner Savage Avocate Lawyer Avocat Avengers Quatre Four Fantastiques Fantastics"
+	content : "Miss She Hulk Jennifer Walters Bruce Banner Savage Avocate Lawyer Avocat Avengers Quatre Four Fantastiques Fantastics shehulk misshulk"
   },
   {
 	title : "Sentry (Robert Reynolds)",
@@ -266,13 +266,13 @@ const SEARCH_INDEX = [
 	title : "Luke Cage",
 	url : "heros/luke-cage.html",
 	type : ["Héros"],
-	content : "Luke Cage Power Man Carl Lucas Héros louer Hero Hire Jessica Jones Daredevil Matt Murdock Avengers Defenders Quatre Four Fantastiques Fantastic"
+	content : "Luke Cage Power Man Carl Lucas Héros louer Hero Hire Jessica Jones Daredevil Matt Murdock Avengers Defenders Quatre Four Fantastiques Fantastic lukecage"
   },
   {
 	title : "Jessica Jones",
 	url : "heros/jessica-jones.html",
 	type : ["Héros"],
-	content : "Jessica Jones Campbell Jewel Peter Parker Spider Man Luke Cage Power Zebediah Killgrave Homme pourpre purple man Defenders Avengers Daredevil"
+	content : "Jessica Jones Campbell Jewel Peter Parker Spider Man Luke Cage Power Zebediah Killgrave Homme pourpre purple man Defenders Avengers Daredevil jessicajones"
   },
   {
 	title : "Le Punisher (Frank Castle)",
@@ -284,37 +284,37 @@ const SEARCH_INDEX = [
 	title : "U.S. Agent (John Walker)",
 	url : "heros/us-agent.html",
 	type : ["Anti-Héros", "Héros"],
-	content : "John Walker US Agent Super Patriot Captain America Steve Rogers Lemar Power Broker Buckies Thurm"
+	content : "John Walker US Agent Super Patriot Captain America Steve Rogers Lemar Power Broker Buckies Thurm usagent"
   },
   {
 	title : "Moon Knight (Marc Spector)",
 	url : "heros/moon-knight.html",
 	type : ["Héros", "Anti-Héros"],
-	content : "Moon Knight Chevalier Lune Khonshu Marc Spector Steven Grant Jake Lockley Poing Egypte Egyptien Dieu Mister Mr Defenders Avengers"
+	content : "Moon Knight Chevalier Lune Khonshu Marc Spector Steven Grant Jake Lockley Poing Egypte Egyptien Dieu Mister Mr Defenders Avengers moonknight"
   },
   {
 	title : "Flèche Noire (Blackagar Boltagon)",
 	url : "heros/black-bolt.html",
 	type : ["Héros"],
-	content : "Black Bolt Fleche Noire Blackagar Boltagon Inhumains Inhumans Medusa Roi Attilan Agon Rynda Maximus Voix Onde sonore Illuminati"
+	content : "Black Bolt Fleche Noire Blackagar Boltagon Inhumains Inhumans Medusa Roi Attilan Agon Rynda Maximus Voix Onde sonore Illuminati blackbolt"
   },
   {
 	title : "Adam Warlock",
 	url : "heros/adam-warlock.html",
 	type : ["Héros"],
-	content : "Adam Warlock Magus Lui Him soul stone pierre gemme ame enclave contre terre maitre evolution high evolutionary pip troll"
+	content : "Adam Warlock Magus Lui Him soul stone pierre gemme ame enclave contre terre maitre evolution high evolutionary pip troll adamwarlock"
   },
   {
 	title : "Blue Marvel (Adam Brashear)",
 	url : "heros/blue-marvel.html",
 	type : ["Héros"],
-	content : "Blue Marvel Adam Brashear Conner Sims Anti man infinaute kennedy uatu watcher gardien"
+	content : "Blue Marvel Adam Brashear Conner Sims Anti man infinaute kennedy uatu watcher gardien bluemarvel"
   },
   {
 	title : "Professeur X (Charles Xavier)",
 	url : "equipes/x-men/charles-xavier.html",
 	type : ["Héros"],
-	content : "Charles Xavier X-Men xmen Mutant Francis Fauteuil roulant télépathe psychique wetchester cerebro illuminati"
+	content : "Charles Xavier X-Men xmen Mutant Francis Fauteuil roulant télépathe psychique wetchester cerebro illuminati charlesxavier professeurx professorx"
   },
   {
 	title : "Cyclope (Scott Summers)",
@@ -338,7 +338,7 @@ const SEARCH_INDEX = [
 	title : "Marvel Girl (Jean Grey)",
 	url : "equipes/x-men/jean-grey.html",
 	type : ["Héros", "Ennemi"],
-	content : "Marvel Girl Jean Grey Phenix Phoenix Dark Noir mutant Madelyn Pryor Summers Xmen X-Men Cerebro"
+	content : "Marvel Girl Jean Grey Phenix Phoenix Dark Noir mutant Madelyn Pryor Summers Xmen X-Men Cerebro marvelgirl jeangrey"
   },
   {
 	title : "Iceberg (Bobby Drake)",
@@ -368,7 +368,7 @@ const SEARCH_INDEX = [
 	title : "Kitty Pryde",
 	url : "equipes/x-men/kitty-pryde.html",
 	type : ["Héros"],
-	content : "Kitty Pryde Katherine Etincelles Shadowcat Star-Lord Lady Xmen X-Men mutante"
+	content : "Kitty Pryde Katherine Etincelles Shadowcat Star-Lord Lady Xmen X-Men mutante kittypryde kitti pride"
   },
   {
 	title : "Malicia (Anna Marie)",
@@ -428,7 +428,7 @@ const SEARCH_INDEX = [
 	title : "Star-Lord (Peter Quill)",
 	url : "equipes/gardiens/star-lord.html",
 	type : ["Héros"],
-	content : "Star Lord Peter Quill Jason J'son Spartax Spartoi Gardiens de la Galaxie Meredith Badoons Yondu"
+	content : "Star Lord Peter Quill Jason J'son Spartax Spartoi Gardiens de la Galaxie Meredith Badoons Yondu starlord"
   },
   {
 	title : "Gamora (Gamora Zen Whoberi)",
@@ -440,7 +440,7 @@ const SEARCH_INDEX = [
 	title : "Rocket Raccoon",
 	url : "equipes/gardiens/rocket-raccoon.html",
 	type : ["Héros"],
-	content : "Rocket Raccoon Groot Raton Laveur Rocky Ranger 89P13 Halfworld demi-monde Lylla Star Lord Gardiens Guardians Galaxie Galaxy"
+	content : "Rocket Raccoon Groot Raton Laveur Rocky Ranger 89P13 Halfworld demi-monde Lylla Star Lord Gardiens Guardians Galaxie Galaxy rocketraccoon racoon raccon"
   },
   {
 	title : "Groot",
@@ -470,7 +470,7 @@ const SEARCH_INDEX = [
 	title : "L'Homme-Chose (Theodore Sallis)",
 	url : "heros/man-thing.html",
 	type : ["Héros"],
-	content : "Homme chose man thing theodore ted sallis so-2 sulfur ellen brandt everglades projet gladiator marais vegetaux vegetal plantes legion monstres monsters thunderbolts midnight sons"
+	content : "Homme chose man thing theodore ted sallis so-2 sulfur ellen brandt everglades projet gladiator marais vegetaux vegetal plantes legion monstres monsters thunderbolts midnight sons manthing"
   },
   {
 	title : "Thanos",
@@ -488,7 +488,7 @@ const SEARCH_INDEX = [
 	title : "Docteur Fatalis (Victor Von Fatalis)",
 	url : "ennemis/docteur-doom.html",
 	type : ["Ennemi"],
-	content : "Docteur Victor Von Fatalis Doom Sorcier Supreme Latvérie Mephisto Cynthia Reed Richards Ben Grimm Susan Storm Johnny Fantastiques Quatre Merlin Kang Cape Masque Fer"
+	content : "Docteur Victor Von Fatalis Doom Sorcier Supreme Latvérie Mephisto Cynthia Reed Richards Ben Grimm Susan Storm Johnny Fantastiques Quatre Merlin Kang Cape Masque Fer vondoom vonfatalis"
   },
   {
 	title : "Galactus",
@@ -542,37 +542,37 @@ const SEARCH_INDEX = [
 	title : "Venom",
 	url : "ennemis/venom.html",
 	type : ["Ennemi", "Anti-Héros"],
-	content : "Venom Spider Man Eddie Brock Mac Gargan Symbiote symbiotique klyntar knull agent Dark avengers Lee Price Sleeper Carnage Dylan"
+	content : "Venom Spider Man spiderman Eddie Brock Mac Gargan Symbiote symbiotique klyntar knull agent Dark avengers Lee Price Sleeper Carnage Dylan"
   },
   {
 	title : "Carnage",
 	url : "ennemis/carnage.html",
 	type : ["Ennemi"],
-	content : "carnage venom symbiote spider man cletus kasady symbiotique rouge sang knull klyntar"
+	content : "carnage venom symbiote spider man spiderman cletus kasady symbiotique rouge sang knull klyntar"
   },
   {
 	title : "Le Bouffon Vert (Norman Osborn)",
 	url : "ennemis/bouffon-vert.html",
 	type : ["Ennemi"],
-	content : "Bouffon Vert Green Goblin Norman Osborn Spider Man Harry Serum Gwen Stacy Citrouille Bombe Planeur"
+	content : "Bouffon Vert Green Goblin Norman Osborn Spider Man spiderman Harry Serum Gwen Stacy Citrouille Bombe Planeur"
   },
   {
 	title : "Le Bouffon Rouge (Norman Osborn)",
 	url : "ennemis/bouffon-rouge.html",
 	type : ["Ennemi"],
-	content : "Bouffon Rouge Norman Osborn Red Goblin Spider Man Harry Vert Carnage Symbiote Citrouille Bombe Planeur"
+	content : "Bouffon Rouge Norman Osborn Red Goblin Spider Man spiderman Harry Vert Carnage Symbiote Citrouille Bombe Planeur"
   },
   {
 	title : "Le Super-Bouffon",
 	url : "ennemis/hobgoblin.html",
 	type : ["Ennemi"],
-	content : "Super Bouffon Hobgoblin Roderick Kingsley Arnold Donovan Ned Leeds Robin Bourne Hans Steamon Vert Rouge Norman Osborn Spider Man Sinister Six"
+	content : "Super Bouffon Hobgoblin Roderick Kingsley Arnold Donovan Ned Leeds Robin Bourne Hans Steamon Vert Rouge Norman Osborn Spider Man spiderman Sinister Six"
   },
   {
 	title : "Docteur Octopus (Otto Octavius)",
 	url : "ennemis/docteur-octopus.html",
 	type : ["Ennemi"],
-	content : "Docteur Doctor Octopus Otto Octavius Tentacule Bras Sinister Six Spider Doc Ock Scientifique Laboratoire"
+	content : "Docteur Doctor Octopus Otto Octavius Tentacule Bras Sinister Six Spider spiderman Doc Ock Scientifique Laboratoire"
   },
   {
 	title : "Le Vautour (Adrian Toomes)",
