@@ -1070,7 +1070,7 @@ const SEARCH_INDEX = [
 	title : "Les Web Warriors",
 	url : "equipes/spider-verse.html",
 	type : ["Équipe", "Héros"],
-	content : "Web Warriors Spider Verse Equipe Héros Totem Araignee toile vie destin héritiers morlun terre-1 peter parker miles morales gwen scarlet ben reilly kaine woman julia carpenter jessica drew superior 2099 silk punk noir ham girl uk doppelganger sp//dr peni cosmic india last stand mangaverse bitch 1602 ma'am Terre-616 Terre-65 Terre-928 Terre-138 Terre-90214 Terre-8311 Terre-982 Terre-833 Terre-14512 Terre-13 Terre-50101 Terre-312500 Terre-2301 Terre-807128 Terre-311 Terre-3123"
+	content : "Web Warriors Spider Verse Spiderverse Spiderman Equipe Héros Totem Araignee toile vie destin héritiers morlun terre-1 peter parker miles morales gwen scarlet ben reilly kaine woman julia carpenter jessica drew superior 2099 silk punk noir ham girl uk doppelganger sp//dr peni cosmic india last stand mangaverse bitch 1602 ma'am Terre-616 Terre-65 Terre-928 Terre-138 Terre-90214 Terre-8311 Terre-982 Terre-833 Terre-14512 Terre-13 Terre-50101 Terre-312500 Terre-2301 Terre-807128 Terre-311 Terre-3123"
   },
   {
 	title : "Les Sinister Six",
