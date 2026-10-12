@@ -754,13 +754,16 @@ h2 {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-    cursor: zoom-in;
+    transform: translate(0, 0) scale(0.9);
+	transition: none;
+	cursor: zoom-in;
+	touch-action: none;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .lightbox.active .lightbox-image {
-    transform: scale(1);
+    transform: translate(0, 0) scale(1);
 }
 
 .lightbox-image.zoomed {
