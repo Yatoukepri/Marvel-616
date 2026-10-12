@@ -957,11 +957,12 @@ footer {
         right: 30px;
     }
 
-    /* Masquage alerte */
-    #translation-alert,
-    .alert {
-        display: none !important;
-    }
+    
+	/* Masquage des autres alertes sur tablette */
+	.alert:not(#translation-alert) {
+		display: none !important;
+	}
+
 
     /* Grille héros */
     .heroes-list {
@@ -974,11 +975,12 @@ footer {
 ========================= */
 
 @media (max-width: 768px) {
-    /* Alerte totalement masquée */
-    #translation-alert,
-    .alert {
-        display: none !important;
-    }
+    
+	/* Masquage des autres alertes sur mobile */
+	.alert:not(#translation-alert) {
+		display: none !important;
+	}
+
 
     /* Désactivation gouttes */
     .background-lines {
@@ -1413,4 +1415,12 @@ footer {
     main.container.category-page > .heroes-list {
         order: 3;
     }
+}
+
+/* Adaptation du texte de l'alerte sur tablette et mobile */
+#translation-alert p {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    line-height: 1.4;
 }
