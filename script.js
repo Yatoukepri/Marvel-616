@@ -286,7 +286,14 @@ lightboxImage.addEventListener("click", e => {
 }
 });
 
-/* ===== ZOOM PAR PINCEMENT — MOBILE / TABLETTE ===== */
+/* ===== ZOOM ET DÉPLACEMENT TACTILE — MOBILE / TABLETTE ===== */
+
+const MIN_SCALE = 1;
+const MAX_SCALE = 4;
+
+let touchStartX = 0;
+let touchStartY = 0;
+let isPinching = false;
 
 lightboxImage.addEventListener("touchstart", e => {
 
@@ -298,11 +305,28 @@ lightboxImage.addEventListener("touchstart", e => {
 
         e.preventDefault();
 
+        isPinching = true;
+        isDragging = false;
+
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
 
         pinchStartDistance = Math.hypot(dx, dy);
         pinchStartScale = currentScale;
+
+    } else if (e.touches.length === 1 && currentScale > 1) {
+
+        e.preventDefault();
+
+        isPinching = false;
+        isDragging = true;
+        hasDragged = false;
+
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+
+        touchStartX = startX;
+        touchStartY = startY;
     }
 
 }, { passive: false });
@@ -314,7 +338,8 @@ lightboxImage.addEventListener("touchmove", e => {
         return;
     }
 
-    if (e.touches.length === 2) {
+    /* ZOOM PROGRESSIF AVEC DEUX DOIGTS */
+    if (e.touches.length === 2 && isPinching) {
 
         e.preventDefault();
 
@@ -328,13 +353,46 @@ lightboxImage.addEventListener("touchmove", e => {
         const scaleChange = currentDistance / pinchStartDistance;
 
         currentScale = Math.min(
-            Math.max(pinchStartScale * scaleChange, 1),
-            ZOOM_SCALE
+            Math.max(pinchStartScale * scaleChange, MIN_SCALE),
+            MAX_SCALE
         );
 
         isZoomed = currentScale > 1;
 
+        if (!isZoomed) {
+            offsetX = 0;
+            offsetY = 0;
+        }
+
         updateTransform();
+        return;
+    }
+
+    /* DÉPLACEMENT AVEC UN DOIGT */
+    if (e.touches.length === 1 && isDragging && currentScale > 1) {
+
+        e.preventDefault();
+
+        const touch = e.touches[0];
+        const dx = touch.clientX - startX;
+        const dy = touch.clientY - startY;
+
+        if (
+            Math.abs(touch.clientX - touchStartX) > DRAG_THRESHOLD ||
+            Math.abs(touch.clientY - touchStartY) > DRAG_THRESHOLD
+        ) {
+            hasDragged = true;
+        }
+
+        if (hasDragged) {
+            offsetX += dx;
+            offsetY += dy;
+
+            startX = touch.clientX;
+            startY = touch.clientY;
+
+            updateTransform();
+        }
     }
 
 }, { passive: false });
@@ -348,6 +406,11 @@ lightboxImage.addEventListener("touchend", e => {
 
     if (e.touches.length < 2) {
         pinchStartDistance = 0;
+        isPinching = false;
+    }
+
+    if (e.touches.length === 0) {
+        isDragging = false;
     }
 
 });
