@@ -14,7 +14,7 @@ const SEARCH_INDEX = [
 	title : "Héros",
 	url : "heros.html",
 	type : ["Catégorie"],
-	content : "Héros Super Catégorie Marvel-616 Spider Man Peter Parker Miles Morales Captain America Steve Rogers Iron Tony Stark Hulk Bruce Banner Thor Odinson Hawkeye Clint Barton Black Widow Natasha Romanoff Wolverine Logan James Howlett Deadpool Wade Wilson Docteur Stephen Strange Black Panther T'Challa Ant Hank Pym Scott Lang Guepe Janet Van Dyne Sorciere Rouge Scarket Witch Wanda Maximoff Vif Argent Quicksilver Pietro Ghost Rider Johnny Blaze Daredevil Matt Murdock Faucon Falcon Sam Wilson Vision Surfer Argent Silver Norrin Radd Blade Erik Brooks Captain Miss Marvel Carol Danvers Nova Richard Rider Namor McKenzie Miss She Hulk Jennifer Walters Sentry Bob Robert Reynolds Void Jessica Jones Luke Cage Power Punisher Frank Castle Moon Knight Marc Spector Steven Grant Jake Lockley Professeur professor X Charles Xavier Star Lord Peter Quill Cyclope Scott Summers Fleche Noire Black Bolt Blackagar Boltagon Spider Woman Jessica Drew"
+	content : "Héros Super Catégorie Marvel-616 Spider Man spiderman Peter Parker Miles Morales Captain America Steve Rogers Iron ironman Tony Stark Hulk Bruce Banner Thor Odinson Hawkeye Clint Barton Black Widow blackwidow Natasha Romanoff Wolverine Logan James Howlett Deadpool Wade Wilson Docteur Stephen Strange Black Panther T'Challa Ant antman Hank Pym Scott Lang Guepe Janet Van Dyne Sorciere Rouge Scarlet Witch Wanda Maximoff Vif Argent vifargent Quicksilver Pietro Ghost Rider Johnny Blaze Daredevil Matt Murdock Faucon Falcon Sam Wilson Vision Surfer Surfeur Argent Silver Norrin Radd Blade Erik Brooks Captain Miss Marvel Carol Danvers Nova Richard Rider Namor McKenzie Miss She Hulk shehulk Jennifer Walters Sentry Bob Robert Reynolds Void Jessica Jones Luke Cage Power powerman Punisher Frank Castle Moon Knight Marc Spector Steven Grant Jake Lockley Professeur professor X Charles Xavier Star Lord Peter Quill Cyclope Scott Summers Fleche Noire Black Bolt Blackagar Boltagon Spider Woman Jessica Drew Reed Richards Mister Mr Fantastique Fantastic Wonder Man wonderman Simon Williams"
   },
   {
 	title : "Super-vilains",
@@ -273,6 +273,12 @@ const SEARCH_INDEX = [
 	url : "heros/jessica-jones.html",
 	type : ["Héros"],
 	content : "Jessica Jones Campbell Jewel Peter Parker Spider Man Luke Cage Power Zebediah Killgrave Homme pourpre purple man Defenders Avengers Daredevil jessicajones"
+  },
+  {
+	title : "Wonder Man (Simon Williams)",
+	url : "heros/wonder-man.html",
+	type : ["Héros"],
+	content : "Wonder Man wonderman simon williams mister monsieur muscle wondy avengers eric vision ultron west coast zemo"
   },
   {
 	title : "Le Punisher (Frank Castle)",
