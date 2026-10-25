@@ -317,6 +317,12 @@ const SEARCH_INDEX = [
 	content : "Blue Marvel Adam Brashear Conner Sims Anti man infinaute kennedy uatu watcher gardien bluemarvel"
   },
   {
+	title : "Le Chevalier Noir (Dane Whitman)",
+	url : "heros/black-knight.html",
+	type : ["Héros"],
+	content : "Black Knight Chevalier Noir Dane Whitman Eobar Garrington Avengers Lame Ebene ébène ebony blade nathan garrett aragorn percy de scandia merlin roi king arthur"
+  },
+  {
 	title : "Professeur X (Charles Xavier)",
 	url : "equipes/x-men/charles-xavier.html",
 	type : ["Héros"],
