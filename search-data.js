@@ -323,6 +323,12 @@ const SEARCH_INDEX = [
 	content : "Black Knight Chevalier Noir Dane Whitman Eobar Garrington Avengers Lame Ebene ébène ebony blade nathan garrett aragorn percy de scandia merlin roi king arthur"
   },
   {
+	title : "Darkhawk (Christopher Powell)",
+	url : "heros/darkhawk.html",
+	type : ["Héros"],
+	content : "darkhawk christopher powell amulette edge falconer edgeman mike grace bazin new warriors newwarriors avengers defenders gardiens galaxie"
+  },
+  {
 	title : "Professeur X (Charles Xavier)",
 	url : "equipes/x-men/charles-xavier.html",
 	type : ["Héros"],
