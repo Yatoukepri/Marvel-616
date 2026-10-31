@@ -1163,6 +1163,12 @@ const SEARCH_INDEX = [
 	content : "Club Damnés Hellfire Equipe Mutant Sebastian Shaw Emma Frost Roberto dacosta Solar Blackheart Daimon Hellstrom Magneto Tornade Mystique Wilson Fisk Caid Kingpin Phénix Noir Dark Phoenix Vipere Jean Grey Brian Braddock Captain Britain Madelyne Pryor Cerveau Brain Psylocke Betsy Warren Worthington Angel Norman Osborn Bouffon Vert Green Goblin Harry Tony Stark Iron Man"
   },
   {
+	title : "La Tour des Avengers",
+	url : "lieux/tour-avengers.html",
+	type : ["Lieux"],
+	content : "Avengers Tour Tower Stark manhattan lieux batiment building bâtiment starktower avengerstower watchtower"
+  },
+  {
 	title : "La Pierre de l'Esprit",
 	url : "infinity-stones/mind-stone.html",
 	type : ["Pierre d'Infinité"],
