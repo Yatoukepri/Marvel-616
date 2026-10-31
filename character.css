@@ -2305,3 +2305,177 @@ body.lightbox-open {
         order: 2;
     }
 }
+
+/* =========================================================
+   PAGES DE LIEUX — NOUVELLES STRUCTURES
+   Classes isolées pour ne pas modifier les pages existantes
+========================================================= */
+
+/* Texte à gauche — image à droite */
+.location-page .location-section-right {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+/* Image à gauche — texte à droite */
+.location-page .location-section-left {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+/* Texte seul — pleine largeur */
+.location-page .location-section-full {
+    width: 100%;
+    margin: 3rem 0;
+}
+
+/* Titres des sections */
+.location-page .location-section-right h2,
+.location-page .location-section-left h2,
+.location-page .location-section-full h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #1f2a44;
+    font-size: 1.4rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Paragraphes */
+.location-page .location-section-right p,
+.location-page .location-section-left p,
+.location-page .location-section-full p {
+    max-width: none;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Conteneurs des images */
+.location-page .location-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Images */
+.location-page .location-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: zoom-in;
+}
+
+/* Légendes */
+.location-page .location-image figcaption {
+    margin-top: 0.45rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================================================
+   RESPONSIVE MOBILE — PAGES DE LIEUX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Sections avec texte et image */
+    .location-page .location-section-right,
+    .location-page .location-section-left {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+        margin: 2.5rem 0;
+    }
+
+    /* Texte en pleine largeur */
+    .location-page .location-text {
+        order: 1;
+        width: 100%;
+    }
+
+    /* Image sous le texte */
+    .location-page .location-image {
+        order: 2;
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .location-page .location-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Légendes */
+    .location-page .location-image figcaption {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+}
+
+/* =========================================================
+   RESPONSIVE TABLETTE — PAGES DE LIEUX
+========================================================= */
+
+@media (max-width: 1024px) and (min-width: 601px) {
+
+    /* Introduction — disposition tablette */
+    .location-page .character-intro,
+    .lieu-page .character-intro {
+        display: grid;
+        grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .location-page .character-feature,
+    .lieu-page .character-feature {
+        width: 100%;
+    }
+
+    .location-page .character-feature .feature-image,
+    .lieu-page .character-feature .feature-image {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .location-page .character-infos,
+    .lieu-page .character-infos {
+        width: 100%;
+    }
+
+    /* Texte à gauche — image à droite */
+    .location-page .location-section-right {
+        grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+        gap: 1.2rem;
+    }
+
+    /* Image à gauche — texte à droite */
+    .location-page .location-section-left {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
+        gap: 1.2rem;
+    }
+
+    /* Images moins imposantes */
+    .location-page .location-image {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+}
