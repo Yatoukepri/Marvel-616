@@ -92,7 +92,7 @@ const SEARCH_INDEX = [
 	title : "Black Widow (Natasha Romanoff)",
 	url : "heros/black-widow.html",
 	type : ["Héros"],
-	content : "Natasha Romanoff avengers espion black widow veuve noire russie russe blackwidow"
+	content : "Natasha Romanoff avengers espion black widow veuve noire russie russe blackwidow champions los angeles heroes heros à a louer héros marvel knights"
   },
   {
 	title : "Hawkeye (Clint Barton)",
@@ -140,13 +140,13 @@ const SEARCH_INDEX = [
 	title : "La Chose (Ben Grimm)",
 	url : "equipes/fantastic-four/ben-grimm.html",
 	type : ["Héros"],
-	content : "Ben Benjamin Grimm Chose Thing Quatre Fantastiques Fantastic Four Pierre Reed Richards Susan Johnny Storm"
+	content : "Ben Benjamin Grimm Chose Thing Quatre Fantastiques Fantastic Four Pierre Reed Richards Susan Johnny Storm avengers defenders gardiens guardians galaxie galaxy"
   },
   {
 	title : "Black Panther (T'Challa)",
 	url : "heros/black-panther.html",
 	type : ["Héros"],
-	content : "black panther t'challa wakanda vibranium adamantium roi afrique bast griffe defenders avengers illuminati fantastique blackpanther"
+	content : "black panther t'challa wakanda vibranium adamantium roi afrique bast griffe defenders avengers illuminati quatre fantastiques fantastic four ultimates blackpanther"
   },
   {
 	title : "Ant-Man (Hank Pym)",
@@ -158,7 +158,7 @@ const SEARCH_INDEX = [
 	title : "Ant-Man (Scott Lang)",
 	url : "heros/scott-lang.html",
 	type : ["Héros"],
-	content : "ant man scott lang hank pym janet van dyne guepe avengers fourmi antman"
+	content : "ant man scott lang hank pym janet van dyne guepe avengers fourmi antman fantastic four quatre fantastiques heroes for hire heros héros à a louer gardiens guardians galaxy galaxie defenders"
   },
   {
 	title : "La Guêpe (Janet Van Dyne)",
@@ -206,7 +206,7 @@ const SEARCH_INDEX = [
 	title : "La Cape (Tyrone Johnson)",
 	url : "heros/cloak.html",
 	type : ["Héros"],
-	content : "tyrone johnson cape cloak darkforce tandy bowen epee épée dagger lifeforce lightforce tenebres ténèbres baron noir simon marshall mister negative martin li"
+	content : "tyrone johnson cape cloak darkforce tandy bowen epee épée dagger lifeforce lightforce tenebres ténèbres baron noir simon marshall mister negative martin li secret avengers xmen x-men x men"
   },
   {
 	title : "L'Épée (Tandy Bowen)",
@@ -230,7 +230,7 @@ const SEARCH_INDEX = [
 	title : "Blade (Erik Brooks)",
 	url : "heros/blade.html",
 	type : ["Anti-Héros"],
-	content : "blade erik brooks vampire dhampyr daywalker dhampire lame pieu épée deacon frost dracula morbius midnight sons"
+	content : "blade erik brooks vampire dhampyr daywalker dhampire lame pieu épée deacon frost dracula morbius midnight sons avengers"
   },
   {
 	title : "Captain Marvel (Carol Danvers)",
@@ -308,19 +308,19 @@ const SEARCH_INDEX = [
 	title : "Adam Warlock",
 	url : "heros/adam-warlock.html",
 	type : ["Héros"],
-	content : "Adam Warlock Magus Lui Him soul stone pierre gemme ame enclave contre terre maitre evolution high evolutionary pip troll adamwarlock"
+	content : "Adam Warlock Magus Lui Him soul stone pierre gemme ame enclave contre terre maitre evolution high evolutionary pip troll adamwarlock infinity watch infinitywatch gardiens guardians galaxy galaxie avengers"
   },
   {
 	title : "Blue Marvel (Adam Brashear)",
 	url : "heros/blue-marvel.html",
 	type : ["Héros"],
-	content : "Blue Marvel Adam Brashear Conner Sims Anti man infinaute kennedy uatu watcher gardien bluemarvel"
+	content : "Blue Marvel Adam Brashear Conner Sims Anti man infinaute kennedy uatu watcher gardien bluemarvel avengers ultimates defenders"
   },
   {
 	title : "Le Chevalier Noir (Dane Whitman)",
 	url : "heros/black-knight.html",
 	type : ["Héros"],
-	content : "Black Knight Chevalier Noir Dane Whitman Eobar Garrington Avengers Lame Ebene ébène ebony blade nathan garrett aragorn percy de scandia merlin roi king arthur"
+	content : "Black Knight Chevalier Noir Dane Whitman Eobar Garrington Avengers Lame Ebene ébène ebony blade nathan garrett aragorn percy de scandia merlin roi king arthur avengers defenders excalibur heroes heros héros à a louer for hire"
   },
   {
 	title : "Darkhawk (Christopher Powell)",
@@ -332,19 +332,19 @@ const SEARCH_INDEX = [
 	title : "Professeur X (Charles Xavier)",
 	url : "equipes/x-men/charles-xavier.html",
 	type : ["Héros"],
-	content : "Charles Xavier X-Men xmen Mutant Francis Fauteuil roulant télépathe psychique wetchester cerebro illuminati charlesxavier professeurx professorx"
+	content : "Charles Xavier X-Men xmen Mutant Francis Fauteuil roulant télépathe psychique wetchester cerebro illuminati charlesxavier professeurx professorx new nouveaux"
   },
   {
 	title : "Cyclope (Scott Summers)",
 	url : "equipes/x-men/cyclope.html",
 	type : ["Héros"],
-	content : "Cyclope scott summers mutant x-men xmen rayon laser optique visière oculaire lunette havok quartz rubis"
+	content : "Cyclope scott summers mutant x-men xmen rayon laser optique visière oculaire lunette havok quartz rubis xforce xfactor"
   },
   {
 	title : "Angel (Warren Worthington III)",
 	url : "equipes/x-men/angel.html",
 	type : ["Héros"],
-	content : "Angel Warren Worthington III Archangel mutant x-men xmen apocalypse"
+	content : "Angel Warren Worthington III Archangel mutant x-men xmen apocalypse champions los angeles defenders x-factor x factor xfactor fxorce men factor x-factor hellfire club des damnés"
   },
   {
 	title : "Le Fauve (Hank McCoy)",
@@ -368,7 +368,7 @@ const SEARCH_INDEX = [
 	title : "Colossus (Piotr Raspoutine)",
 	url : "equipes/x-men/colossus.html",
 	type : ["Héros"],
-	content : "Colossus Piotr Raspoutine Rasputin Nikolaievitch Magik Illyana russie russe sovietique Xmen X-Men mutant metal"
+	content : "Colossus Piotr Raspoutine Rasputin Nikolaievitch Magik Illyana russie russe sovietique Xmen X-Men mutant metal x men excalibur force xforce"
   },
   {
 	title : "Diablo (Kurt Wagner)",
@@ -416,13 +416,13 @@ const SEARCH_INDEX = [
 	title : "Bishop (Lucas Bishop)",
 	url : "equipes/x-men/bishop.html",
 	type : ["Héros"],
-	content : "Bishop Lucas mutant xmen x-men futur"
+	content : "Bishop Lucas mutant xmen x-men futur xforce x men x-force force"
   },
   {
 	title : "Cable (Nathan Summers)",
 	url : "equipes/x-men/cable.html",
 	type : ["Héros", "Anti-Héros"],
-	content : "Cable Nathan Summers Cyclope Madelyne Pryor Jean Grey Scott Futur Apocalypse Virus mutant xmen x-men xfactor x-factor xforce x-force"
+	content : "Cable Nathan Summers Cyclope Madelyne Pryor Jean Grey Scott Futur Apocalypse Virus mutant xmen x-men xfactor x-factor xforce x-force six pack sixpack x new mutants nouveaux"
   },
   {
 	title : "Magik (Illyana Raspoutine)",
@@ -674,7 +674,7 @@ const SEARCH_INDEX = [
 	title : "Bucky Barnes / Le Soldat de l'Hiver",
 	url : "ennemis/winter-soldier.html",
 	type : ["Héros", "Ennemi"],
-	content : "Bucky James Buchanan Barnes Soldat Hiver Loup Blanc Captain America Steve Rogers Hydra Lehigh Seconde Guerre Mondiale Crane Rouge Envahisseur Legion Liberté Cybernétique Avengers"
+	content : "Bucky James Buchanan Barnes Soldat Hiver Loup Blanc Captain America Steve Rogers Hydra Lehigh Seconde Guerre Mondiale Crane Rouge Envahisseur Legion Liberté Cybernétique Avengers thunderbolts"
   },
   {
 	title : "Elektra Natchios",
