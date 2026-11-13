@@ -1210,6 +1210,12 @@ const SEARCH_INDEX = [
 	type : ["Pierre d'Infinité"],
 	content : "Ego Pierre Stone Gemme Infinité Infinite Nemesis Ultravers Terre Earth 93060"
   },
+  {
+	title : "Uatu, le Gardien",
+	url : "entites/watcher.html",
+	type : ["Entités"],
+	content : "Uatu Gardien Watcher Observateur Entites Entités Cosmiques Surveiller Observer Ikor"
+  },
 ];
 
 window.SEARCH_INDEX = SEARCH_INDEX;
