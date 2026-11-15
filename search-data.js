@@ -1169,6 +1169,12 @@ const SEARCH_INDEX = [
 	content : "Avengers Tour Tower Stark manhattan lieux batiment building bâtiment starktower avengerstower watchtower"
   },
   {
+	title : "Le Manoir des Avengers",
+	url : "lieux/manoir-avengers.html",
+	type : ["Lieux"],
+	content : "Avengers Manoir Mansion Embassy Ambassade Stark manhattan lieux batiment quartier general général headquarters bâtiment avengersmansion manoiravengers"
+  },
+  {
 	title : "La Pierre de l'Esprit",
 	url : "infinity-stones/mind-stone.html",
 	type : ["Pierre d'Infinité"],
