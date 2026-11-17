@@ -142,7 +142,7 @@ h2 {
 }
 
 /* ===========================
-   ACCORDÉON INFOS GÉNÉRALES
+   ACCORDÉON : INFOS GÉNÉRALES
 ============================ */
 
 /* Conteneur */
@@ -228,7 +228,7 @@ h2 {
     transform: translate(-50%, -50%);
 }
 
-/* Contenu animé */
+/* Animation */
 .version-content {
     overflow: hidden;
     height: 0;
@@ -314,7 +314,7 @@ h2 {
     display: block;
 }
 
-/* Accordéon costumes (variante) */
+/* Accordéon costumes */
 .costume-accordion {
     border: 1px solid #dcdfe6;
     border-radius: 6px;
@@ -349,7 +349,7 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Accordéon avec flèche à gauche */
+/* Accordéon flèche à gauche */
 .left-icon-accordion .version-toggle {
     justify-content: flex-start;
     gap: 0.75rem;
@@ -364,7 +364,7 @@ h2 {
 }
 
 /* =========================
-      CARROUSEL (GALERIE)
+      CARROUSEL
 ========================= */
 
 .carousel-test {
@@ -470,7 +470,7 @@ h2 {
     margin: 0 auto;
 }
 
-/* Colonnes dynamiques (pilotées par JS) */
+/* Colonnes dynamiques (avec JS) */
 .enemies-grid.cols-5 { grid-template-columns: repeat(5, 1fr); }
 .enemies-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
 .enemies-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
@@ -518,7 +518,7 @@ h2 {
 .teams-grid.teams-4 { grid-template-columns: repeat(4, 1fr); }
 .teams-grid.teams-5 { grid-template-columns: repeat(5, 1fr); }
 
-/* Limitation taille pour 1-2 images (pages personnages uniquement) */
+/* Limitation taille pour 1-2 images */
 .character-page .character-teams .teams-grid.teams-1 {
     max-width: 320px;
     margin: 0 auto;
@@ -533,7 +533,7 @@ h2 {
     max-width: 240px;
 }
 
-/* Cartes équipes */
+/* Images équipes */
 .team-card {
     width: 100%;
     text-align: center;
@@ -600,7 +600,7 @@ h2 {
 }
 
 /* ==============================
-    SECTION HÉRAUTS (GALACTUS)
+    SECTION HÉRAUTS GALACTUS
 ============================== */
 
 .character-heralds {
@@ -687,7 +687,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
 }
 
-/* Nimrod - Image plus petite */
+/* Image plus petite pour Nimrod */
 .sentinels-split h2 + .sentinels-grid .sentinels-images.one {
     max-width: 280px;
 }
@@ -698,7 +698,7 @@ h2 {
     object-fit: contain;
 }
 
-/* Nimrod - Ajustement texte */
+/* Texte ajusté pour Nimrod */
 .sentinels-split.reverse .sentinels-text {
     max-width: 420px;
     margin-left: 0;
@@ -2478,4 +2478,28 @@ body.lightbox-open {
         margin: 0 auto;
     }
 
+}
+
+/* Correction de l'ordre des éléments sur les pages de lieux */
+@media (max-width: 1024px) {
+
+    .location-page .location-section-right,
+    .location-page .location-section-left {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    .location-page .location-text {
+        order: 1;
+        width: 100%;
+    }
+
+    .location-page .location-image {
+        order: 2;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
 }
