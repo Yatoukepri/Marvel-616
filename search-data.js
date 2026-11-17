@@ -425,6 +425,12 @@ const SEARCH_INDEX = [
 	content : "Cable Nathan Summers Cyclope Madelyne Pryor Jean Grey Scott Futur Apocalypse Virus mutant xmen x-men xfactor x-factor xforce x-force six pack sixpack x new mutants nouveaux"
   },
   {
+	title : "Forge",
+	url : "equipes/x-men/forge.html",
+	type : ["Héros"],
+	content : "Forge Daniel Lone Eagle X-Men X Men Factor Force Mutant Cheyenne Indien Ororo Munroe Tornade Storm Vietnam"
+  },
+  {
 	title : "Magik (Illyana Raspoutine)",
 	url : "equipes/x-men/magik.html",
 	type : ["Héros"],
