@@ -1216,4 +1216,238 @@ if (
 
 })();
 
+
+/* =========================
+   CONSENTEMENT AUX COOKIES
+   GOOGLE ANALYTICS
+========================= */
+
+const GA_MEASUREMENT_ID = "G-C2VT7WLGP2";
+const CONSENT_STORAGE_KEY = "marvel616_consent_v1";
+
+let analyticsLoaded = false;
+
+/* =========================
+   CHARGEMENT DE GOOGLE ANALYTICS
+========================= */
+
+function loadGoogleAnalytics() {
+
+    window["ga-disable-" + GA_MEASUREMENT_ID] = false;
+
+    if (analyticsLoaded) {
+        if (typeof window.gtag === "function") {
+            window.gtag("consent", "update", {
+                analytics_storage: "granted"
+            });
+        }
+        return;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = function () {
+        window.dataLayer.push(arguments);
+    };
+
+    window.gtag("consent", "default", {
+        analytics_storage: "granted"
+    });
+
+    window.gtag("js", new Date());
+    window.gtag("config", GA_MEASUREMENT_ID);
+
+    const script = document.createElement("script");
+
+    script.async = true;
+    script.src =
+        "https://www.googletagmanager.com/gtag/js?id=" +
+        GA_MEASUREMENT_ID;
+
+    document.head.appendChild(script);
+
+    analyticsLoaded = true;
+}
+
+/* =========================
+   ENREGISTREMENT DU CONSENTEMENT
+========================= */
+
+function saveCookieConsent(analytics) {
+
+    const consent = {
+        analytics: analytics,
+        date: new Date().toISOString()
+    };
+
+    try {
+        localStorage.setItem(
+            CONSENT_STORAGE_KEY,
+            JSON.stringify(consent)
+        );
+    } catch (error) {
+        console.warn("Impossible d'enregistrer le consentement.", error);
+    }
+
+    if (analytics) {
+
+        loadGoogleAnalytics();
+
+    } else {
+
+        window["ga-disable-" + GA_MEASUREMENT_ID] = true;
+
+        if (typeof window.gtag === "function") {
+            window.gtag("consent", "update", {
+                analytics_storage: "denied"
+            });
+        }
+    }
+
+    banner.hidden = true;
+}
+
+/* =========================
+   CRÉATION DU BANDEAU
+========================= */
+
+const banner = document.createElement("div");
+
+banner.id = "cookie-banner";
+banner.hidden = true;
+
+banner.innerHTML = `
+    <div class="cookie-banner-content">
+
+        <h2>Gestion des cookies</h2>
+
+        <p>
+            Marvel-616 utilise Google Analytics pour mesurer
+            la fréquentation du site et améliorer son contenu.
+            Ces statistiques ne sont activées qu'avec votre accord.
+            Vous pouvez accepter, refuser ou personnaliser votre choix.
+        </p>
+
+        <div class="cookie-banner-actions">
+
+            <button type="button" class="cookie-reject">
+                Tout refuser
+            </button>
+
+            <button type="button" class="cookie-customize">
+                Personnaliser
+            </button>
+
+            <button type="button" class="cookie-accept">
+                Tout accepter
+            </button>
+
+        </div>
+
+        <div class="cookie-preferences" hidden>
+
+            <h3>Personnaliser vos préférences</h3>
+
+            <p>
+                <label>
+                    <input type="checkbox" id="analytics-consent">
+                    Autoriser les statistiques de fréquentation
+                    (Google Analytics)
+                </label>
+            </p>
+
+            <div class="cookie-banner-actions">
+
+                <button type="button" class="cookie-save">
+                    Enregistrer mon choix
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+`;
+
+document.body.appendChild(banner);
+
+/* =========================
+   BOUTONS DU BANDEAU
+========================= */
+
+const acceptButton = banner.querySelector(".cookie-accept");
+const rejectButton = banner.querySelector(".cookie-reject");
+const customizeButton = banner.querySelector(".cookie-customize");
+const preferences = banner.querySelector(".cookie-preferences");
+const saveButton = banner.querySelector(".cookie-save");
+const analyticsCheckbox = banner.querySelector("#analytics-consent");
+
+acceptButton.addEventListener("click", () => {
+    saveCookieConsent(true);
+});
+
+rejectButton.addEventListener("click", () => {
+    saveCookieConsent(false);
+});
+
+customizeButton.addEventListener("click", () => {
+    preferences.hidden = !preferences.hidden;
+});
+
+saveButton.addEventListener("click", () => {
+    saveCookieConsent(analyticsCheckbox.checked);
+});
+
+/* =========================
+   LIEN GESTION DES COOKIES
+   DANS LE FOOTER
+========================= */
+
+const footer = document.querySelector("footer");
+
+if (footer) {
+
+    const settingsButton = document.createElement("button");
+
+    settingsButton.type = "button";
+    settingsButton.className = "cookie-settings-link";
+    settingsButton.textContent = "Gestion des cookies";
+
+    settingsButton.addEventListener("click", () => {
+
+        preferences.hidden = true;
+        analyticsCheckbox.checked = false;
+        banner.hidden = false;
+
+    });
+
+    footer.appendChild(settingsButton);
+}
+
+/* =========================
+   VÉRIFICATION DU CONSENTEMENT
+========================= */
+
+let savedConsent = null;
+
+try {
+    savedConsent = JSON.parse(
+        localStorage.getItem(CONSENT_STORAGE_KEY)
+    );
+} catch (error) {
+    savedConsent = null;
+}
+
+if (savedConsent && typeof savedConsent.analytics === "boolean") {
+
+    if (savedConsent.analytics) {
+        loadGoogleAnalytics();
+    }
+
+} else {
+
+    banner.hidden = false;
+}
+
+
 });
