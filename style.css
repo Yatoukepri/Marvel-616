@@ -1426,3 +1426,128 @@ footer {
     word-break: normal;
     line-height: 1.4;
 }
+
+
+/* =========================
+   CONSENTEMENT AUX COOKIES
+========================= */
+
+#cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 900px;
+    padding: 1.8rem;
+    background: #ffffff;
+    color: #1f2a44;
+    border: 2px solid #c41e3a;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+}
+
+#cookie-banner[hidden] {
+    display: none;
+}
+
+.cookie-banner-content h2 {
+    margin-bottom: 0.7rem;
+    font-size: 1.25rem;
+    color: #1f2a44;
+}
+
+.cookie-banner-content p {
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #444444;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.7rem;
+}
+
+.cookie-banner-actions button {
+    padding: 0.7rem 1.2rem;
+    border: 1px solid #c41e3a;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cookie-accept {
+    background-color: #c41e3a;
+    color: #ffffff;
+}
+
+.cookie-accept:hover {
+    background-color: #a71930;
+}
+
+.cookie-reject {
+    background-color: #ffffff;
+    color: #1f2a44;
+}
+
+.cookie-reject:hover {
+    background-color: #f1f3f7;
+}
+
+.cookie-customize {
+    background-color: #1f2a44;
+    color: #ffffff;
+    border-color: #1f2a44 !important;
+}
+
+.cookie-customize:hover {
+    background-color: #141c30;
+}
+
+/* Affichage mobile */
+
+@media (max-width: 768px) {
+
+    #cookie-banner {
+        bottom: 10px;
+        width: calc(100% - 20px);
+        padding: 1.2rem;
+    }
+
+    .cookie-banner-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .cookie-banner-content p {
+        font-size: 0.85rem;
+    }
+
+    .cookie-banner-actions {
+        flex-direction: column;
+    }
+
+    .cookie-banner-actions button {
+        width: 100%;
+    }
+}
+
+.cookie-settings-link {
+    margin: 10px;
+    padding: 5px 10px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+    font: inherit;
+}
+
+.cookie-settings-link:hover {
+    color: #c41e3a;
+}
